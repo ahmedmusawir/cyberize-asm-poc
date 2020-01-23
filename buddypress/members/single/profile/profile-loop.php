@@ -10,12 +10,12 @@
 <!-- MOOSE BP TESTING START -->
 <style>
 .bp-profile-loop {
-  border: 8px dotted steelblue;
+  /* border: 8px dotted steelblue; */
 }
 </style>
 <div class="bp-profile-loop">
 
-  <h4><strong><code>profile-loop.php</code> under <code>members/single/profile/</code> folder</strong></h4>
+  <!-- <h4><strong><code>profile-loop.php</code> under <code>members/single/profile/</code> folder</strong></h4> -->
 
   <!-- MOOSE BP TESTING END -->
 

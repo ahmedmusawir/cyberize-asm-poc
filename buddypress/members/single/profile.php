@@ -10,12 +10,12 @@
 
 <style>
 .bp-profile {
-  border: 8px dotted dodgerblue;
+  /* border: 8px dotted dodgerblue; */
 }
 </style>
 <div class="bp-profile">
 
-  <h4><strong><code>profile.php</code> under <code>members/single/</code> folder</strong></h4>
+  <!-- <h4><strong><code>profile.php</code> under <code>members/single/</code> folder</strong></h4> -->
 
   <!-- MOOSE BP TESTING END -->
 
