@@ -22,8 +22,7 @@
   <h4><strong>home.php under members/ folder</strong></h4>
 
   <?php 
-  // $user_id = get_current_user_id();
-  $user_id = bp_displayed_user_id();
+  $user_id = get_current_user_id();
   $field = 7;
   $data = xprofile_get_field_data( $field, $user_id, $multi_format = 'array' );
   
@@ -62,7 +61,47 @@
       </article>
       <article class="left-col col-md-7">
 
-        <?php bp_nouveau_member_template_part(); ?>
+        <?php //bp_nouveau_member_template_part(); ?>
+        <?php if ( bp_has_profile() ) : ?>
+        <?php while ( bp_profile_groups() ) : bp_the_profile_group(); ?>
+
+        <ul id="profile-groups">
+          <?php if ( bp_profile_group_has_fields() ) : ?>
+
+          <li>
+            <?php //if ( bp_get_the_profile_field_id() != 5) : ?>
+
+            <?php bp_the_profile_group_name() ?>
+
+            <?php //endif; ?>
+
+            <ul class="profile-group-fields">
+              <?php while ( bp_profile_fields() ) : bp_the_profile_field(); ?>
+
+              <?php if ( bp_field_has_data() && bp_get_the_profile_field_id() != 5) : ?>
+
+              <li>
+                <?php bp_the_profile_field_name() ?>
+                <?php bp_the_profile_field_value() ?>
+              </li>
+              <?php endif; ?>
+
+              <?php endwhile; ?>
+            </ul>
+          <li>
+
+            <?php endif; ?>
+        </ul>
+
+        <?php endwhile; ?>
+
+        <?php else: ?>
+
+        <div id="message" class="info">
+          <p>This user does not have a profile.</p>
+        </div>
+
+        <?php endif;?>
 
       </article>
       <article class="left-col col-md-2">

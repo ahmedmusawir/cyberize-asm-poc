@@ -22,13 +22,12 @@
   <h4><strong>home.php under members/ folder</strong></h4>
 
   <?php 
-  // $user_id = get_current_user_id();
-  $user_id = bp_displayed_user_id();
+  $user_id = get_current_user_id();
   $field = 7;
   $data = xprofile_get_field_data( $field, $user_id, $multi_format = 'array' );
   
-  // echo "<h1>$user_id</h1>";
-  // echo "<h1>Data: $data</h1>";
+  echo "<h1>$user_id</h1>";
+  echo "<h1>Data: $data</h1>";
 
   // echo '<pre>';
   // print_r($data);
@@ -54,21 +53,9 @@
 
     <?php endif; ?>
 
-    <div id="item-body" class="item-body row">
+    <div id="item-body" class="item-body">
 
-      <article class="left-col col-md-3">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum laborum quos beatae quasi nisi cum debitis
-        facere, blanditiis soluta esse adipisci! Assumenda nesciunt quae numquam ad voluptates cupiditate accusamus vel!
-      </article>
-      <article class="left-col col-md-7">
-
-        <?php bp_nouveau_member_template_part(); ?>
-
-      </article>
-      <article class="left-col col-md-2">
-        <img src="/wp-content/uploads/2020/01/profile-sidebar.png" alt="">
-      </article>
-
+      <?php bp_nouveau_member_template_part(); ?>
 
     </div><!-- #item-body -->
   </div><!-- // .bp-wrap -->

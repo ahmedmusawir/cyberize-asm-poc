@@ -1,7 +1,11 @@
 // Removing Home tab from Member's Profile Page
 
-.bp-mem-single-nav {
-  #front-personal-li {
-    // display: none;
+#buddypress {
+  .bp-wrap {
+    #item-body {
+      .bp-navs.bp-subnavs.user-subnav {
+        // display: none;
+      }
+    }
   }
 }
