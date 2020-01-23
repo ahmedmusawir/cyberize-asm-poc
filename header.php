@@ -74,8 +74,8 @@
 						'container'			 => 'div',
 						'container_class' => 'main-nav',  	
 						// 'menu_class'     => 'mx-auto', //CENTER ALIGN
-						// 'menu_class'     => 'ml-auto', //RIGHT ALIGN
-						'menu_class'     => 'mr-auto', //LEFT ALIGN
+						'menu_class'     => 'ml-auto', //RIGHT ALIGN
+						// 'menu_class'     => 'mr-auto', //LEFT ALIGN
 					) );
 				?>
 			</div>
