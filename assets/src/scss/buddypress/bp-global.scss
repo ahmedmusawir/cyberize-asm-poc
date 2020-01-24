@@ -1,4 +1,5 @@
 // Removing Home tab from Member's Profile Page
+$asm-title-font-color: #024d80;
 
 #buddypress {
   .bp-wrap {
@@ -12,26 +13,53 @@
           border-radius: 50%;
         }
         .athlete-title {
-          font-size: 2rem;
+          font-size: 1.8rem;
+          color: $asm-title-font-color;
+        }
+      }
+
+      .athlete-meta {
+        // border: 4px dotted red;
+        color: $asm-title-font-color;
+        font-weight: 600;
+        i.fa-eye {
+          font-size: 1.2rem;
+          color: deepskyblue;
+        }
+        i.fa-star {
+          font-size: 1.2rem;
+          color: orange;
         }
       }
 
       .athlete-bio {
-        border: 4px dotted red;
+        .list-group-item {
+          // border: 4px dotted red;
+          background-color: lighten($color: #e7e7e7, $amount: 8%);
+          border-bottom: 4px solid white;
+          border-top: 1px solid white;
+          border-right: 1px solid white;
+          border-left: 1px solid white;
+        }
       }
 
       .athlete-sports-info {
         // border: 4px dotted blue;
         h1 {
           color: #024d80;
+          font-size: 2rem;
+          text-align: center;
         }
         small {
           font-size: 1rem;
-          color: #024d80;
+          font-weight: 600;
+          color: $asm-title-font-color;
         }
       }
 
       .bp-profile-loop {
+        display: none;
+
         .screen-heading.view-profile-screen {
           display: none;
         }
