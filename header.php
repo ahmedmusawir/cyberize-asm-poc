@@ -12,62 +12,65 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
+
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
+  <meta charset="<?php bloginfo( 'charset' ); ?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="profile" href="https://gmpg.org/xfn/11">
 
-<!--==============================
-=            favicons            =
-===============================-->
-<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/uploads/2018/02/Moose-32.png">
+  <!--=====================================
+=            FONTAWESOME PRO            =
+======================================-->
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="/wp-content/uploads/2018/02/Moose-32.png"> -->
+  <!-- <script src="https://kit.fontawesome.com/c8084101a0.js" crossorigin="anonymous"></script> -->
 
-<!--===========================================
+
+  <!--===========================================
 =            CUSTOM ANALYTICS TAGS - HEAD     =
 ============================================-->
 
-<!--====  Base Tag  ====-->
+  <!--====  Base Tag  ====-->
 
-<?php the_field('before_ending_head_tag_default', 'option'); ?>
+  <?php the_field('before_ending_head_tag_default', 'option'); ?>
 
-<!--====  Custom Conversion Tag  ====-->
+  <!--====  Custom Conversion Tag  ====-->
 
 
-<?php the_field('before_ending_head_tag'); ?>
+  <?php the_field('before_ending_head_tag'); ?>
 
-<!--====  End of CUSTOM ANALYTICS TAGS  ====-->
+  <!--====  End of CUSTOM ANALYTICS TAGS  ====-->
 
-	<?php wp_head(); ?>
+  <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 
-<!--======================================================
+  <!--======================================================
 =            CUSTOM ANALYTICS TAGS - BODY TOP            =
 =======================================================-->
 
-<!--====  Base Tag  ====-->
+  <!--====  Base Tag  ====-->
 
-<?php the_field('after_top_body_tag_default', 'option'); ?>
+  <?php the_field('after_top_body_tag_default', 'option'); ?>
 
-<!--====  Custom Conversion Tag  ====-->
+  <!--====  Custom Conversion Tag  ====-->
 
-<?php the_field('after_top_body_tag'); ?>
+  <?php the_field('after_top_body_tag'); ?>
 
-<!--====  End of CUSTOM ANALYTICS TAGS - BODY TOP  ====-->
+  <!--====  End of CUSTOM ANALYTICS TAGS - BODY TOP  ====-->
 
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'cyberize' ); ?></a>
+  <div id="page" class="site">
+    <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'cyberize' ); ?></a>
 
-	<header id="header-cyberize" class="site-header">
-		<!-- Moose_Framework_2 NAVIGATION GOES HERE -->
-		
-		<section class="main-navigation">
-			<div class="main-navbar container">
-				<a class="navbar-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<img src="/wp-content/uploads/2020/01/logo-round.png" class="w-50" alt="">
-				</a>
-				<?php
+    <header id="header-cyberize" class="site-header">
+      <!-- Moose_Framework_2 NAVIGATION GOES HERE -->
+
+      <section class="main-navigation">
+        <div class="main-navbar container">
+          <a class="navbar-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+            <img src="/wp-content/uploads/2020/01/logo-round.png" class="w-50" alt="">
+          </a>
+          <?php
 					wp_nav_menu( array(
 						'theme_location' => 'menu-1', // Defined when registering the menu
 						'menu_id'        => 'primary-menu',
@@ -78,12 +81,12 @@
 						// 'menu_class'     => 'mr-auto', //LEFT ALIGN
 					) );
 				?>
-			</div>
-		</section>
-		
+        </div>
+      </section>
 
-		<!-- Moose_Framework_2 NAVIGATION ENDS HERE -->
 
-	</header><!-- #masthead -->
+      <!-- Moose_Framework_2 NAVIGATION ENDS HERE -->
 
-	<div id="content" class="site-content">
+    </header><!-- #masthead -->
+
+    <div id="content" class="site-content">

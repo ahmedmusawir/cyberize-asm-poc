@@ -7,6 +7,9 @@ $asm-title-font-color: #024d80;
       .bp-navs.bp-subnavs.user-subnav {
         // display: none;
       }
+
+      //  LEFT COLUMN START
+
       #item-header-avatar {
         img.avatar {
           // border: 1rem dotted red;
@@ -14,13 +17,11 @@ $asm-title-font-color: #024d80;
         }
         .athlete-title {
           font-size: 1.8rem;
-          color: $asm-title-font-color;
         }
       }
 
       .athlete-meta {
         // border: 4px dotted red;
-        color: $asm-title-font-color;
         font-weight: 600;
         i.fa-eye {
           font-size: 1.2rem;
@@ -53,68 +54,118 @@ $asm-title-font-color: #024d80;
         small {
           font-size: 1rem;
           font-weight: 600;
-          color: $asm-title-font-color;
         }
       }
+
+      //  LEFT COLUMN END
+
+      // CENTER COLUMN START
 
       .bp-profile-loop {
         display: none;
+      }
 
-        .screen-heading.view-profile-screen {
-          display: none;
-        }
+      #top-video-section {
+        // border: 0.3rem dotted red;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid $cg-primary;
 
-        .bp-widget.base {
-          display: none;
-        }
-
-        .bp-widget.video {
-          .screen-heading.profile-group-title {
-            display: none;
-          }
-          .field_5.field_youtube.optional-field.field_type_oembed {
-            .label {
-              display: none;
-            }
-          }
-        }
-
-        .bp-widget.member-bio {
-          display: none;
-        }
-
-        .bp-widget.about {
-          .field_28.field_about.optional-field.field_type_textarea {
-            .label {
-              display: none;
-            }
-          }
-        }
-
-        .bp-widget.sports-info {
-          .field_20.field_sports-info.optional-field.field_type_textarea {
-            .label {
-              display: none;
-            }
-          }
-        }
-
-        .bp-widget.pictures {
-          .field_25.field_athlete-pic-1.optional-field.field_type_image {
-            // .field_25.field_athletic-pic-1.optional-field.visibility-public.field_type_image {
-            // border: 1rem solid red;
-            .label {
-              display: none;
-            }
-          }
-          .field_26.field_athletic-pic-2.optional-field.visibility-public.field_type_image {
-            // border: 1rem solid blue;
-            .label {
-              display: none;
-            }
+        .block-header {
+          font-size: 2rem;
+          i.fa-youtube {
+            color: lighten($color: $cg-primary, $amount: 20%);
           }
         }
       }
+
+      #about-section {
+        // border: 0.3rem dotted limegreen;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid $cg-primary;
+
+        .block-header {
+          font-size: 2rem;
+          i.fa-user-circle {
+            color: lighten($color: $cg-primary, $amount: 20%);
+          }
+        }
+        .text-content {
+          color: lighten($color: $cg-primary, $amount: 10%);
+        }
+      }
+
+      #sports-info-section {
+        // border: 0.3rem dotted sienna;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid $cg-primary;
+
+        .block-header {
+          font-size: 2rem;
+          i.fa-trophy {
+            color: lighten($color: $cg-primary, $amount: 20%);
+          }
+        }
+        .text-content {
+          color: lighten($color: $cg-primary, $amount: 10%);
+        }
+      }
+
+      #academics-section {
+        // border: 0.3rem dotted cyan;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid $cg-primary;
+
+        .block-header {
+          font-size: 2rem;
+          i.fa-file-certificate {
+            color: lighten($color: $cg-primary, $amount: 20%);
+          }
+        }
+        .text-content {
+          color: lighten($color: $cg-primary, $amount: 10%);
+          font-weight: 600;
+        }
+        .school-box {
+          background-color: lighten($color: #e7e7e7, $amount: 5%);
+
+          .school-name {
+            font-weight: 700;
+          }
+        }
+        .test-score-box {
+          .test-score-title {
+            font-size: 1.7rem;
+          }
+        }
+      }
+
+      #instagram-section {
+        // border: 0.3rem dotted goldenrod;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid $cg-primary;
+
+        .block-header {
+          font-size: 2rem;
+          i.fa-instagram {
+            color: lighten($color: $cg-primary, $amount: 20%);
+          }
+        }
+        .text-content {
+          color: lighten($color: $cg-primary, $amount: 10%);
+        }
+      }
+
+      #interview-section {
+        // border: 0.3rem dotted steelblue;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid $cg-primary;
+      }
+
+      // CENTER COLUMN END
+
+      // RIGHT COLUMN START
+
+      // RIGHT COLUMN END
     }
   }
 }

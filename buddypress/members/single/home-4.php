@@ -62,10 +62,8 @@
   $toefl = xprofile_get_field_data( 24, $user_id, $multi_format = 'array' );
 
   // INSTAGRAM
-  $instagram_1 = xprofile_get_field_data( 25, $user_id, $multi_format = 'array' );
-  $instagram_2 = xprofile_get_field_data( 26, $user_id, $multi_format = 'array' );
-  $instagram_3 = xprofile_get_field_data( 35, $user_id, $multi_format = 'array' );
-  $instagram_4 = xprofile_get_field_data( 36, $user_id, $multi_format = 'array' );
+  $insta_text = xprofile_get_field_data( 25, $user_id, $multi_format = 'array' );
+  $insta_ole = xprofile_get_field_data( 26, $user_id, $multi_format = 'array' );
   
   // INTERVIEW 
   $interview = xprofile_get_field_data( 27, $user_id, $multi_format = 'array' );
@@ -291,42 +289,28 @@
             </span>
           </div>
 
-          <div class="test-score-box row">
-            <div class="col-md-4">
-              <h1 class="test-score-title">GPA</h1>
-              <p class="text-content">
-                <?php echo $gpa; ?>
-              </p>
-            </div>
-            <div class="col-md-4">
-              <h1 class="test-score-title">SAT</h1>
-              <p class="text-content">
-                <?php echo $sat; ?>
-              </p>
-            </div>
-            <div class="col-md-4">
-              <h1 class="test-score-title">TOEFL</h1>
-              <p class="text-content">
-                <?php echo $toefl; ?>
-              </p>
-            </div>
-          </div>
+          <h1>GPA</h1>
+          <?php echo $gpa; ?>
+
+          <h1>SAT</h1>
+          <?php echo $sat; ?>
+
+          <h1>TOEFL</h1>
+          <hr>
+          <?php echo $toefl; ?>
 
         </section>
 
         <section id="instagram-section">
 
-          <h1 class="block-header">
-            <i class="fab fa-instagram"></i> Instagram
-          </h1>
-
-          <div class="row gallery-box">
+          <h1>Instagram OLE URL</h1>
+          <div class="row">
 
             <div class="col-sm-6 col-md-6 col-lg-6">
 
               <div class="embed-responsive embed-responsive-1by1">
 
-                <?php echo $instagram_1; ?>
+                <?php echo $insta_ole; ?>
 
               </div>
 
@@ -336,7 +320,7 @@
 
               <div class="embed-responsive embed-responsive-1by1">
 
-                <?php echo $instagram_2; ?>
+                <?php echo $insta_ole; ?>
 
               </div>
 
@@ -346,7 +330,7 @@
 
               <div class="embed-responsive embed-responsive-1by1">
 
-                <?php echo $instagram_3; ?>
+                <?php echo $insta_ole; ?>
 
               </div>
 
@@ -356,7 +340,7 @@
 
               <div class="embed-responsive embed-responsive-1by1">
 
-                <?php echo $instagram_4; ?>
+                <?php echo $insta_ole; ?>
 
               </div>
 
