@@ -156,12 +156,59 @@
 
         <!-- CUSTOM MOOSE MAGIC STARTS HERE FOR ATHLETE PROFILE  -->
 
-        <h1>Video Ole</h1>
-        <pre>
-        <?php echo $vid_ole; ?>
-        </pre>
-        <h1>Video Text</h1>
-        <?php echo $vid_text; ?>
+        <div class="embed-responsive embed-responsive-16by9">
+
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo $vid_text; ?>"
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+            <!-- THE YOUTUBE VIDEO EMBED - RESPONSIVE - VIDEO ID INPUT ONLY -->
+          </iframe>
+        </div>
+        <h1 class="block-header py-4">
+          <i class="fab fa-youtube"></i> Videos
+        </h1>
+
+        <section class="more-videos-box">
+
+          <div class="row">
+            <div class="col-sm-6 col-md-6">
+
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/iIjSS_MbCGg" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                <!-- THE YOUTUBE VIDEO EMBED - RESPONSIVE - VIDEO ID INPUT ONLY -->
+              </iframe>
+
+            </div>
+            <div class="col-sm-6 col-md-6">
+
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo $vid_text; ?>"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+                <!-- THE YOUTUBE VIDEO EMBED - RESPONSIVE - VIDEO ID INPUT ONLY -->
+              </iframe>
+
+            </div>
+            <div class="col-sm-6 col-md-6">
+
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo $vid_text; ?>"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+                <!-- THE YOUTUBE VIDEO EMBED - RESPONSIVE - VIDEO ID INPUT ONLY -->
+              </iframe>
+
+            </div>
+            <div class="col-sm-6 col-md-6">
+
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo $vid_text; ?>"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+                <!-- THE YOUTUBE VIDEO EMBED - RESPONSIVE - VIDEO ID INPUT ONLY -->
+              </iframe>
+
+            </div>
+
+        </section>
+
 
         <h1>About</h1>
         <?php echo $about; ?>
@@ -183,11 +230,6 @@
         <h1>TOEFL</h1>
         <hr>
         <?php echo $toefl; ?>
-
-        <h1>Instagram Text URL</h1>
-        <pre>
-        <?php echo $insta_text; ?>
-        </pre>
 
 
         <h1>Instagram OLE URL</h1>
