@@ -9,27 +9,9 @@
 <!-- FONT AWESOME 5 PRO -->
 <script src="https://kit.fontawesome.com/c8084101a0.js" crossorigin="anonymous"></script>
 
-<!-- MOOSE BP TESTING START -->
 
-<style>
-.bp-home {
-  /* border: 8px dotted blue; */
-}
-
-#item-body {
-  /* border: 10px dotted red; */
-}
-</style>
-<div class="bp-home">
-
-  <!-- <h4><strong>home.php under members/ folder</strong></h4> -->
-
-  <?php 
-  // $user_id = get_current_user_id();
+<?php 
   $user_id = bp_displayed_user_id();
-  // $field = 7;
-  // $data = xprofile_get_field_data( $field, $user_id, $multi_format = 'array' );
-  // Gender 7
 
   // FOLLOWING SET IS FOR THE LEFT ATHLETE COLUMN [MEMBER BIO FIELD GROUP]
   $gender = xprofile_get_field_data( 7, $user_id, $multi_format = 'array' );
@@ -43,12 +25,16 @@
   // FOLLOWING SET IS FOR THE CENTER ATHLETE COLUMN
 
   // VIDEOS
-  $video_1 = xprofile_get_field_data( 31, $user_id, $multi_format = 'array' );
-  $video_2 = xprofile_get_field_data( 29, $user_id, $multi_format = 'array' );
-  $video_3 = xprofile_get_field_data( 32, $user_id, $multi_format = 'array' );
-  $video_4 = xprofile_get_field_data( 33, $user_id, $multi_format = 'array' );
-  $video_5 = xprofile_get_field_data( 34, $user_id, $multi_format = 'array' );
-  
+  $video_1 = '';
+  $video_2 = '';
+  $video_3 = '';
+  $video_4 = '';
+  $video_5 = '';
+  // $video_1 = xprofile_get_field_data( 31, $user_id, $multi_format = 'array' );
+  // $video_2 = xprofile_get_field_data( 29, $user_id, $multi_format = 'array' );
+  // $video_3 = xprofile_get_field_data( 32, $user_id, $multi_format = 'array' );
+  // $video_4 = xprofile_get_field_data( 33, $user_id, $multi_format = 'array' );
+  // $video_5 = xprofile_get_field_data( 34, $user_id, $multi_format = 'array' );
   // ABOUT
   $about = xprofile_get_field_data( 28, $user_id, $multi_format = 'array' );
 
@@ -62,10 +48,14 @@
   $toefl = xprofile_get_field_data( 24, $user_id, $multi_format = 'array' );
 
   // INSTAGRAM
-  $instagram_1 = xprofile_get_field_data( 25, $user_id, $multi_format = 'array' );
-  $instagram_2 = xprofile_get_field_data( 26, $user_id, $multi_format = 'array' );
-  $instagram_3 = xprofile_get_field_data( 35, $user_id, $multi_format = 'array' );
-  $instagram_4 = xprofile_get_field_data( 36, $user_id, $multi_format = 'array' );
+  $instagram_1 = '';
+  $instagram_2 = '';
+  $instagram_3 = '';
+  $instagram_4 = '';
+  // $instagram_1 = xprofile_get_field_data( 25, $user_id, $multi_format = 'array' );
+  // $instagram_2 = xprofile_get_field_data( 26, $user_id, $multi_format = 'array' );
+  // $instagram_3 = xprofile_get_field_data( 35, $user_id, $multi_format = 'array' );
+  // $instagram_4 = xprofile_get_field_data( 36, $user_id, $multi_format = 'array' );
   
   // INTERVIEW 
   $interview = xprofile_get_field_data( 27, $user_id, $multi_format = 'array' );
@@ -80,27 +70,49 @@
 
   ?>
 
-  <!-- MOOSE BP TESTING END -->
+<!-- MOOSE BP TESTING END -->
 
-  <?php bp_nouveau_member_hook( 'before', 'home_content' ); ?>
+<div class="top-page-navbar">
+  <section class="top-blue-bar">
+    <h3 class="page-title">Profile</h3>
+  </section>
+  <section class="top-page-menu clearfix">
+    <h3 class="menu-title float-left">Go To</h3>
+    <ul class="list-inline menu-box">
+      <a href="#top-video-section">
+        <li class="list-inline-item"><i class="fad fa-video"></i>Video</li>
+      </a>
+      <a href="#about-section">
+        <li class="list-inline-item"><i class="fad fa-user-circle"></i>Bio</li>
+      </a>
+      <a href="#sports-info-section">
+        <li class="list-inline-item"><i class="fad fa-trophy-alt"></i></i>Sports Info</li>
+      </a>
+      <a href="#academics-section">
+        <li class="list-inline-item"><i class="fad fa-file-certificate"></i>Academics</li>
+      </a>
+      <a href="#instagram-section">
+        <li class="list-inline-item"><i class="fab fa-instagram"></i>Instagram</li>
+      </a>
+      <a href="#interview-section">
+        <li class="list-inline-item"><i class="fad fa-comments"></i>Interviews</li>
+      </a>
+    </ul>
+  </section>
+</div>
 
-  <div id="item-header" role="complementary" data-bp-item-id="<?php echo esc_attr( bp_displayed_user_id() ); ?>"
-    data-bp-item-component="members" class="users-header single-headers">
+<div class="bp-wrap">
+  <?php if ( ! bp_nouveau_is_object_nav_in_sidebar() ) : ?>
 
-    <?php //bp_nouveau_member_header_template_part(); ?>
+  <?php //bp_get_template_part( 'members/single/parts/item-nav' ); ?>
 
-  </div><!-- #item-header -->
+  <?php endif; ?>
 
-  <div class="bp-wrap">
-    <?php if ( ! bp_nouveau_is_object_nav_in_sidebar() ) : ?>
+  <div id="item-body" class="item-body row">
+    <!-- LEFT COLUMN START -->
+    <article class="left-col col-sm-12 col-md-12 col-lg-4 col-xl-3">
 
-    <?php //bp_get_template_part( 'members/single/parts/item-nav' ); ?>
-
-    <?php endif; ?>
-
-    <div id="item-body" class="item-body row">
-      <!-- LEFT COLUMN START -->
-      <article class="col-sm-12 col-md-12 col-lg-4 col-xl-3">
+      <section class="athlete-info-box">
         <div id="item-header-avatar">
           <a href="<?php bp_displayed_user_link(); ?>">
 
@@ -160,237 +172,242 @@
             </h1>
           </div>
         </section>
-      </article>
-      <!-- LEFT COLUMN END -->
 
-      <!-- CENTER COLUMN START -->
-      <article class="col-sm-12 col-md-12 col-lg-8 col-xl-6">
+      </section> <!-- athlete-info-box end -->
+    </article>
+    <!-- LEFT COLUMN END -->
 
-        <!-- FOLLOWING IS USED FOR THE PROFILE EDIT FUNCTION ONLY -->
-        <?php bp_nouveau_member_template_part(); ?>
-        <!-- ---------------------------------------------->
+    <!-- CENTER COLUMN START -->
+    <article class="col-sm-12 col-md-12 col-lg-8 col-xl-6">
 
-        <!-- CUSTOM MOOSE MAGIC STARTS HERE FOR ATHLETE PROFILE  -->
-        <section id="top-video-section">
+      <!-- FOLLOWING IS USED FOR THE PROFILE EDIT FUNCTION ONLY -->
+      <?php //bp_nouveau_member_template_part(); ?>
 
-          <div class="embed-responsive embed-responsive-16by9">
+      <?php //get_template_part( 'buddypress/members/single/parts/item-nav' ); ?>
+      <?php //get_template_part( 'buddypress/members/single/parts/item-subnav' ); ?>
 
-            <iframe class="embed-responsive-item"
-              src="https://www.youtube.com/embed/<?php echo $video_1; ?>?autoplay=0&loop=0&controls=1&showinfo=0&rel=0"
-              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-              <!-- THE YOUTUBE VIDEO EMBED - RESPONSIVE - VIDEO ID INPUT ONLY -->
-            </iframe>
+      <!-- ---------------------------------------------->
+
+      <!-- CUSTOM MOOSE MAGIC STARTS HERE FOR ATHLETE PROFILE  -->
+      <section id="top-video-section">
+
+        <div class="embed-responsive embed-responsive-16by9">
+
+          <iframe class="embed-responsive-item"
+            src="https://www.youtube.com/embed/<?php echo $video_1; ?>?autoplay=0&loop=0&controls=1&showinfo=0&rel=0"
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+            <!-- THE YOUTUBE VIDEO EMBED - RESPONSIVE - VIDEO ID INPUT ONLY -->
+          </iframe>
+
+        </div>
+
+        <h1 class="block-header">
+          <i class="fab fa-youtube"></i> Videos
+        </h1>
+
+        <section class="more-videos-box">
+
+          <div class="row">
+            <div class="col-sm-6 col-md-6">
+
+              <div class="embed-responsive embed-responsive-16by9">
+
+                <iframe class="embed-responsive-item mt-2"
+                  src="https://www.youtube.com/embed/<?php echo $video_2; ?>?autoplay=0&loop=0&controls=1&showinfo=0&rel=0"
+                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                  <!-- THE YOUTUBE VIDEO EMBED - RESPONSIVE - VIDEO ID INPUT ONLY -->
+                </iframe>
+
+              </div>
+
+            </div>
+            <div class="col-sm-6 col-md-6">
+
+              <div class="embed-responsive embed-responsive-16by9">
+
+                <iframe class="embed-responsive-item mt-2"
+                  src="https://www.youtube.com/embed/<?php echo $video_3; ?>?autoplay=0&loop=0&controls=1&showinfo=0&rel=0"
+                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                  <!-- THE YOUTUBE VIDEO EMBED - RESPONSIVE - VIDEO ID INPUT ONLY -->
+                </iframe>
+
+              </div>
+
+            </div>
+            <div class="col-sm-6 col-md-6">
+
+              <div class="embed-responsive embed-responsive-16by9">
+
+                <iframe class="embed-responsive-item mt-2"
+                  src="https://www.youtube.com/embed/<?php echo $video_4; ?>?autoplay=0&loop=0&controls=1&showinfo=0&rel=0"
+                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                  <!-- THE YOUTUBE VIDEO EMBED - RESPONSIVE - VIDEO ID INPUT ONLY -->
+                </iframe>
+
+              </div>
+
+            </div>
+            <div class="col-sm-6 col-md-6">
+
+              <div class="embed-responsive embed-responsive-16by9">
+
+                <iframe class="embed-responsive-item mt-2"
+                  src="https://www.youtube.com/embed/<?php echo $video_5; ?>?autoplay=0&loop=0&controls=1&showinfo=0&rel=0"
+                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                  <!-- THE YOUTUBE VIDEO EMBED - RESPONSIVE - VIDEO ID INPUT ONLY -->
+                </iframe>
+
+              </div>
+
+            </div>
+
+        </section> <!-- end more-videos-box -->
+
+      </section> <!-- end top-video-section -->
+
+      <section id="about-section">
+
+        <h1 class="block-header">
+          <i class="fas fa-user-circle"></i> About
+        </h1>
+
+        <p class="text-content">
+          <?php echo $about; ?>
+        </p>
+
+      </section>
+
+      <section id="sports-info-section">
+
+        <h1 class="block-header">
+          <i class="fas fa-trophy"></i> Sports Info
+        </h1>
+
+        <p class="text-content">
+          <?php echo $sports_info; ?>
+        </p>
+
+      </section>
+
+      <section id="academics-section">
+
+        <h1 class="block-header">
+          <i class="fas fa-file-certificate"></i> Academics
+        </h1>
+
+        <div class="school-box clearfix p-4">
+          <span class="school-title float-left">SCHOOL NAME</span>
+          <span class="school-name float-right">
+
+            <?php echo $school_name; ?>
+
+          </span>
+        </div>
+
+        <div class="test-score-box row">
+          <div class="col-md-4">
+            <h1 class="test-score-title">GPA</h1>
+            <p class="text-content">
+              <?php echo $gpa; ?>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h1 class="test-score-title">SAT</h1>
+            <p class="text-content">
+              <?php echo $sat; ?>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h1 class="test-score-title">TOEFL</h1>
+            <p class="text-content">
+              <?php echo $toefl; ?>
+            </p>
+          </div>
+        </div>
+
+      </section>
+
+      <section id="instagram-section">
+
+        <h1 class="block-header">
+          <i class="fab fa-instagram"></i> Instagram
+        </h1>
+
+        <div class="row gallery-box">
+
+          <div class="col-sm-6 col-md-6 col-lg-6">
+
+            <div class="embed-responsive embed-responsive-1by1">
+
+              <?php echo $instagram_1; ?>
+
+            </div>
 
           </div>
 
-          <h1 class="block-header">
-            <i class="fab fa-youtube"></i> Videos
-          </h1>
+          <div class="col-sm-6 col-md-6 col-lg-6">
 
-          <section class="more-videos-box">
+            <div class="embed-responsive embed-responsive-1by1">
 
-            <div class="row">
-              <div class="col-sm-6 col-md-6">
+              <?php echo $instagram_2; ?>
 
-                <div class="embed-responsive embed-responsive-16by9">
+            </div>
 
-                  <iframe class="embed-responsive-item mt-2"
-                    src="https://www.youtube.com/embed/<?php echo $video_2; ?>?autoplay=0&loop=0&controls=1&showinfo=0&rel=0"
-                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                    <!-- THE YOUTUBE VIDEO EMBED - RESPONSIVE - VIDEO ID INPUT ONLY -->
-                  </iframe>
-
-                </div>
-
-              </div>
-              <div class="col-sm-6 col-md-6">
-
-                <div class="embed-responsive embed-responsive-16by9">
-
-                  <iframe class="embed-responsive-item mt-2"
-                    src="https://www.youtube.com/embed/<?php echo $video_3; ?>?autoplay=0&loop=0&controls=1&showinfo=0&rel=0"
-                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                    <!-- THE YOUTUBE VIDEO EMBED - RESPONSIVE - VIDEO ID INPUT ONLY -->
-                  </iframe>
-
-                </div>
-
-              </div>
-              <div class="col-sm-6 col-md-6">
-
-                <div class="embed-responsive embed-responsive-16by9">
-
-                  <iframe class="embed-responsive-item mt-2"
-                    src="https://www.youtube.com/embed/<?php echo $video_4; ?>?autoplay=0&loop=0&controls=1&showinfo=0&rel=0"
-                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                    <!-- THE YOUTUBE VIDEO EMBED - RESPONSIVE - VIDEO ID INPUT ONLY -->
-                  </iframe>
-
-                </div>
-
-              </div>
-              <div class="col-sm-6 col-md-6">
-
-                <div class="embed-responsive embed-responsive-16by9">
-
-                  <iframe class="embed-responsive-item mt-2"
-                    src="https://www.youtube.com/embed/<?php echo $video_5; ?>?autoplay=0&loop=0&controls=1&showinfo=0&rel=0"
-                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                    <!-- THE YOUTUBE VIDEO EMBED - RESPONSIVE - VIDEO ID INPUT ONLY -->
-                  </iframe>
-
-                </div>
-
-              </div>
-
-          </section> <!-- end more-videos-box -->
-
-        </section> <!-- end top-video-section -->
-
-        <section id="about-section">
-
-          <h1 class="block-header">
-            <i class="fas fa-user-circle"></i> About
-          </h1>
-
-          <p class="text-content">
-            <?php echo $about; ?>
-          </p>
-
-        </section>
-
-        <section id="sports-info-section">
-
-          <h1 class="block-header">
-            <i class="fas fa-trophy"></i> Sports Info
-          </h1>
-
-          <p class="text-content">
-            <?php echo $sports_info; ?>
-          </p>
-
-        </section>
-
-        <section id="academics-section">
-
-          <h1 class="block-header">
-            <i class="fas fa-file-certificate"></i> Academics
-          </h1>
-
-          <div class="school-box clearfix p-4">
-            <span class="school-title float-left">SCHOOL NAME</span>
-            <span class="school-name float-right">
-
-              <?php echo $school_name; ?>
-
-            </span>
           </div>
 
-          <div class="test-score-box row">
-            <div class="col-md-4">
-              <h1 class="test-score-title">GPA</h1>
-              <p class="text-content">
-                <?php echo $gpa; ?>
-              </p>
+          <div class="col-sm-6 col-md-6 col-lg-6">
+
+            <div class="embed-responsive embed-responsive-1by1">
+
+              <?php echo $instagram_3; ?>
+
             </div>
-            <div class="col-md-4">
-              <h1 class="test-score-title">SAT</h1>
-              <p class="text-content">
-                <?php echo $sat; ?>
-              </p>
-            </div>
-            <div class="col-md-4">
-              <h1 class="test-score-title">TOEFL</h1>
-              <p class="text-content">
-                <?php echo $toefl; ?>
-              </p>
-            </div>
+
           </div>
 
-        </section>
+          <div class="col-sm-6 col-md-6 col-lg-6">
 
-        <section id="instagram-section">
+            <div class="embed-responsive embed-responsive-1by1">
 
-          <h1 class="block-header">
-            <i class="fab fa-instagram"></i> Instagram
-          </h1>
-
-          <div class="row gallery-box">
-
-            <div class="col-sm-6 col-md-6 col-lg-6">
-
-              <div class="embed-responsive embed-responsive-1by1">
-
-                <?php echo $instagram_1; ?>
-
-              </div>
+              <?php echo $instagram_4; ?>
 
             </div>
 
-            <div class="col-sm-6 col-md-6 col-lg-6">
+          </div>
 
-              <div class="embed-responsive embed-responsive-1by1">
+        </div> <!-- End Row -->
 
-                <?php echo $instagram_2; ?>
+      </section>
 
-              </div>
+      <section id="interview-section">
 
-            </div>
+        <h1 class="block-header">
+          <i class="fad fa-comments"></i> Interviews
+        </h1>
 
-            <div class="col-sm-6 col-md-6 col-lg-6">
-
-              <div class="embed-responsive embed-responsive-1by1">
-
-                <?php echo $instagram_3; ?>
-
-              </div>
-
-            </div>
-
-            <div class="col-sm-6 col-md-6 col-lg-6">
-
-              <div class="embed-responsive embed-responsive-1by1">
-
-                <?php echo $instagram_4; ?>
-
-              </div>
-
-            </div>
-
-          </div> <!-- End Row -->
-
-        </section>
-
-        <section id="interview-section">
-
-          <h1>INTERVIEW</h1>
+        <p class="text-content">
           <?php echo $interview; ?>
+        </p>
 
-        </section>
-
-
-        <!-- CUSTOM MOOSE MAGIC ENDS HERE FOR ATHLETE PROFILE  -->
-
-      </article>
-      <!-- CENTER COLUMN END -->
-
-      <article class="col-sm-12 col-md-12 col-lg-12 col-xl-3">
-        <img src="/wp-content/uploads/2020/01/profile-sidebar.png" alt="">
-      </article>
+      </section>
 
 
-    </div><!-- #item-body -->
-  </div><!-- // .bp-wrap -->
+      <!-- CUSTOM MOOSE MAGIC ENDS HERE FOR ATHLETE PROFILE  -->
 
-  <?php bp_nouveau_member_hook( 'after', 'home_content' ); ?>
+    </article>
+    <!-- CENTER COLUMN END -->
 
-  <!-- MOOSE BP TESTING START -->
+    <article class="col-sm-12 col-md-12 col-lg-12 col-xl-3">
+      <img src="/wp-content/uploads/2020/01/profile-sidebar.png" alt="">
+    </article>
 
-</div> <!-- delete me (bp-moose) -->
+  </div><!-- #item-body -->
 
-<!-- MOOSE BP TESTING END -->
+</div><!-- // .bp-wrap -->
+
+<?php bp_nouveau_member_hook( 'after', 'home_content' ); ?>

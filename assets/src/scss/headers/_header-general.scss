@@ -8,7 +8,7 @@
   width: 100%;
   display: block;
   clear: both;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   text-transform: uppercase;
   background: #313131;
 
@@ -21,13 +21,11 @@
     .main-nav {
       display: flex;
       align-items: center !important;
-      // border: 2px dotted red;
       padding-top: 1rem;
     }
   }
 
   ul {
-    // border: 2px dotted yellow;
     list-style: none;
     margin: 0;
     padding-left: 0;
@@ -78,8 +76,6 @@
     font-size: 1rem;
     text-decoration: none;
     line-height: 1.3em;
-    color: white;
-    color: hsl(0, 0%, 100%);
   }
 
   // CURRENT PAGE HOVER

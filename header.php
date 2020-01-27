@@ -66,7 +66,7 @@
       <!-- Moose_Framework_2 NAVIGATION GOES HERE -->
 
       <section class="main-navigation">
-        <div class="main-navbar container">
+        <div class="main-navbar navbar navbar-light bg-light fixed-top">
           <a class="navbar-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
             <img src="/wp-content/uploads/2020/01/logo-round.png" class="w-50" alt="">
           </a>
@@ -76,11 +76,11 @@
 						'menu_id'        => 'primary-menu',
 						'container'			 => 'div',
 						'container_class' => 'main-nav',  	
-						// 'menu_class'     => 'mx-auto', //CENTER ALIGN
-						'menu_class'     => 'ml-auto', //RIGHT ALIGN
+						'menu_class'     => 'mx-auto', //CENTER ALIGN
+						// 'menu_class'     => 'ml-auto', //RIGHT ALIGN
 						// 'menu_class'     => 'mr-auto', //LEFT ALIGN
 					) );
-				?>
+				 ?>
         </div>
       </section>
 

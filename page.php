@@ -17,7 +17,7 @@ get_header(); ?>
 <style type="text/css">
 #general-page-header {
   width: 100vw;
-  height: 50px;
+  height: 25px;
   background-color: black;
   background-image: url('<?php the_field('general_page_header_image', 'option') ?>');
   background-size: cover;
