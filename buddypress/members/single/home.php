@@ -272,7 +272,7 @@
 
       <section id="about-section">
 
-        <h1 class="block-header">
+        <h1 id="about" class="block-header">
           <i class="fas fa-user-circle"></i> About
         </h1>
 
@@ -411,3 +411,29 @@
 </div><!-- // .bp-wrap -->
 
 <?php bp_nouveau_member_hook( 'after', 'home_content' ); ?>
+
+<script>
+(function($, window) {
+  var adjustAnchor = function() {
+
+    var $anchor = $(':target'),
+      fixedElementHeight = 370;
+
+    if ($anchor.length > 0) {
+
+      $('html, body')
+        .stop()
+        .animate({
+          scrollTop: $anchor.offset().top - fixedElementHeight
+        }, 200);
+
+    }
+
+  };
+
+  $(window).on('hashchange load', function() {
+    adjustAnchor();
+  });
+
+})(jQuery, window);
+</script>

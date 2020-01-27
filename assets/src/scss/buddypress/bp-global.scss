@@ -10,12 +10,14 @@
     width: 100%;
     z-index: 1000;
     .top-blue-bar {
-      border: 4px dotted red;
       width: 100%;
-      background-color: $cg-secondary;
+      padding: 0.01rem 2rem;
+      background-color: rgba($color: $cg-secondary, $alpha: 0.3);
+      // background-color: $cg-secondary;
 
       .page-title {
         color: white;
+        font-weight: 600;
       }
     }
 
@@ -28,7 +30,9 @@
       .menu-title {
         padding-right: 2rem;
         padding-left: 2rem;
+        font-weight: 600;
       }
+
       .menu-box {
         margin-top: 2rem;
         margin-left: 2rem;
@@ -37,6 +41,7 @@
           padding: 0.5rem 2rem;
           margin-left: 1rem;
           border: 1px solid gray;
+          border-radius: 6px;
           color: lighten($color: $cg-primary, $amount: 10%);
           font-size: 1.1rem;
 
@@ -50,6 +55,7 @@
 
   .bp-wrap {
     #item-body {
+      margin-top: 230px;
       position: relative;
 
       .bp-navs.bp-subnavs.user-subnav {
