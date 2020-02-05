@@ -11,56 +11,8 @@
 
 
 <?php 
-  $user_id = bp_displayed_user_id();
+  // $user_id = bp_displayed_user_id();
 
-  // FOLLOWING SET IS FOR THE LEFT ATHLETE COLUMN [MEMBER BIO FIELD GROUP]
-  $gender = xprofile_get_field_data( 7, $user_id, $multi_format = 'array' );
-  $dob = xprofile_get_field_data( 10, $user_id, $multi_format = 'array' );
-  $nationality = xprofile_get_field_data( 11, $user_id, $multi_format = 'array' );
-  $height = xprofile_get_field_data( 14, $user_id, $multi_format = 'array' );
-  $weight = xprofile_get_field_data( 15, $user_id, $multi_format = 'array' );
-  $sport = xprofile_get_field_data( 16, $user_id, $multi_format = 'array' );
-  $enrollment_year = xprofile_get_field_data( 17, $user_id, $multi_format = 'array' );
-
-  // FOLLOWING SET IS FOR THE CENTER ATHLETE COLUMN
-
-  // VIDEOS
-  $video_1 = '';
-  $video_2 = '';
-  $video_3 = '';
-  $video_4 = '';
-  $video_5 = '';
-  // $video_1 = xprofile_get_field_data( 31, $user_id, $multi_format = 'array' );
-  // $video_2 = xprofile_get_field_data( 29, $user_id, $multi_format = 'array' );
-  // $video_3 = xprofile_get_field_data( 32, $user_id, $multi_format = 'array' );
-  // $video_4 = xprofile_get_field_data( 33, $user_id, $multi_format = 'array' );
-  // $video_5 = xprofile_get_field_data( 34, $user_id, $multi_format = 'array' );
-  // ABOUT
-  $about = xprofile_get_field_data( 28, $user_id, $multi_format = 'array' );
-
-  // SPORTS INFO
-  $sports_info = xprofile_get_field_data( 20, $user_id, $multi_format = 'array' );
-
-  // ACADEMICS
-  $school_name = xprofile_get_field_data( 21, $user_id, $multi_format = 'array' );
-  $gpa = xprofile_get_field_data( 22, $user_id, $multi_format = 'array' );
-  $sat = xprofile_get_field_data( 23, $user_id, $multi_format = 'array' );
-  $toefl = xprofile_get_field_data( 24, $user_id, $multi_format = 'array' );
-
-  // INSTAGRAM
-  $instagram_1 = '';
-  $instagram_2 = '';
-  $instagram_3 = '';
-  $instagram_4 = '';
-  // $instagram_1 = xprofile_get_field_data( 25, $user_id, $multi_format = 'array' );
-  // $instagram_2 = xprofile_get_field_data( 26, $user_id, $multi_format = 'array' );
-  // $instagram_3 = xprofile_get_field_data( 35, $user_id, $multi_format = 'array' );
-  // $instagram_4 = xprofile_get_field_data( 36, $user_id, $multi_format = 'array' );
-  
-  // INTERVIEW 
-  $interview = xprofile_get_field_data( 27, $user_id, $multi_format = 'array' );
-  
-  
   // echo "<h1>$user_id</h1>";
   // echo "<h1>Data: $data</h1>";
 
@@ -73,11 +25,9 @@
 <!-- MOOSE BP TESTING END -->
 
 <div class="top-page-navbar">
-  <section class="top-blue-bar">
-    <h3 class="page-title">Profile</h3>
-  </section>
+
   <section class="top-page-menu clearfix">
-    <h3 class="menu-title float-left">Go To</h3>
+    <h3 class="menu-title float-left">Profile</h3>
     <ul class="list-inline menu-box">
       <a href="#top-video-section">
         <li class="list-inline-item"><i class="fad fa-video"></i>Video</li>
@@ -85,8 +35,8 @@
       <a href="#about-section">
         <li class="list-inline-item"><i class="fad fa-user-circle"></i>Bio</li>
       </a>
-      <a href="#sports-info-section">
-        <li class="list-inline-item"><i class="fad fa-trophy-alt"></i></i>Sports Info</li>
+      <a href="#sports-stats-section">
+        <li class="list-inline-item"><i class="fad fa-trophy-alt"></i></i>Sports Stats</li>
       </a>
       <a href="#academics-section">
         <li class="list-inline-item"><i class="fad fa-file-certificate"></i>Academics</li>
@@ -112,68 +62,14 @@
     <!-- LEFT COLUMN START -->
     <article class="left-col col-sm-12 col-md-12 col-lg-4 col-xl-3">
 
-      <section class="athlete-info-box">
-        <div id="item-header-avatar">
-          <a href="<?php bp_displayed_user_link(); ?>">
+      <!-- LEFT-INFO-BOX SECTION START -->
 
-            <div class="athlete-img-box text-center">
+      <?php 
+      get_template_part('/buddypress/members/single/_moose-template-parts/athlete-profile-left-info-box');
+      ?>
 
-              <?php bp_displayed_user_avatar( 'type=full' ); ?>
+      <!-- LEFT-INFO-BOX SECTION END -->
 
-            </div>
-            <h1 class="athlete-title text-center">
-
-              <?php echo bp_core_get_user_displayname( $user_id, true ); ?>
-
-            </h1>
-          </a>
-        </div><!-- #item-header-avatar -->
-
-        <section class="athlete-meta">
-
-          <div class="athlete-meta-info clearfix px-1 py-3">
-            <span class="eye float-left"><i class="fas fa-eye"></i> &nbsp;1,234 Views</span>
-            <span class="star float-right"><i class="fas fa-star"></i> &nbsp;4.5</span>
-          </div>
-
-        </section>
-
-        <section class="athlete-bio">
-          <ul class="list-group">
-            <li class="list-group-item">
-              <span class="label float-left">GENDER</span>
-              <span class="label float-right"><?php echo $gender; ?></span>
-            </li>
-            <li class="list-group-item">
-              <span class="label float-left">DOB</span>
-              <span class="label float-right"><?php echo $dob; ?></span>
-            </li>
-            <li class="list-group-item">
-              <span class="label float-left">NATIONALITY</span>
-              <span class="label float-right"><?php echo $nationality; ?></span>
-            </li>
-            <li class="list-group-item">
-              <span class="label float-left">HEIGHT</span>
-              <span class="label float-right"><?php echo $height; ?></span>
-            </li>
-            <li class="list-group-item">
-              <span class="label float-left">WEIGHT</span>
-              <span class="label float-right"><?php echo $weight; ?></span>
-            </li>
-          </ul>
-          <div class="athlete-sports-info">
-            <h1 class="float-left">
-              <?php echo $sport; ?><br>
-              <small class="float-left">SPORT</small>
-            </h1>
-            <h1 class="float-right">
-              <?php echo $enrollment_year; ?><br>
-              <small class="float-right">ENROLLMENT YEAR</small>
-            </h1>
-          </div>
-        </section>
-
-      </section> <!-- athlete-info-box end -->
     </article>
     <!-- LEFT COLUMN END -->
 
@@ -181,7 +77,7 @@
     <article class="col-sm-12 col-md-12 col-lg-8 col-xl-6">
 
       <!-- FOLLOWING IS USED FOR THE PROFILE EDIT FUNCTION ONLY -->
-      <?php //bp_nouveau_member_template_part(); ?>
+      <?php bp_nouveau_member_template_part(); ?>
 
       <?php //get_template_part( 'buddypress/members/single/parts/item-nav' ); ?>
       <?php //get_template_part( 'buddypress/members/single/parts/item-subnav' ); ?>
@@ -189,212 +85,56 @@
       <!-- ---------------------------------------------->
 
       <!-- CUSTOM MOOSE MAGIC STARTS HERE FOR ATHLETE PROFILE  -->
-      <section id="top-video-section">
 
-        <div class="embed-responsive embed-responsive-16by9">
+      <!-- TOP VIDEO SECTION START -->
 
-          <iframe class="embed-responsive-item"
-            src="https://www.youtube.com/embed/<?php echo $video_1; ?>?autoplay=0&loop=0&controls=1&showinfo=0&rel=0"
-            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-            <!-- THE YOUTUBE VIDEO EMBED - RESPONSIVE - VIDEO ID INPUT ONLY -->
-          </iframe>
+      <?php 
+      get_template_part('/buddypress/members/single/_moose-template-parts/athlete-profile-video');
+      ?>
 
-        </div>
+      <!-- TOP VIDEO SECTION END -->
 
-        <h1 class="block-header">
-          <i class="fab fa-youtube"></i> Videos
-        </h1>
+      <!-- ABOUT SECTION START -->
 
-        <section class="more-videos-box">
+      <?php 
+      get_template_part('/buddypress/members/single/_moose-template-parts/athlete-profile-about');
+      ?>
 
-          <div class="row">
-            <div class="col-sm-6 col-md-6">
+      <!-- ABOUT SECTION END -->
 
-              <div class="embed-responsive embed-responsive-16by9">
+      <!-- SPORTS STATS SECTION STARTS -->
 
-                <iframe class="embed-responsive-item mt-2"
-                  src="https://www.youtube.com/embed/<?php echo $video_2; ?>?autoplay=0&loop=0&controls=1&showinfo=0&rel=0"
-                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                  <!-- THE YOUTUBE VIDEO EMBED - RESPONSIVE - VIDEO ID INPUT ONLY -->
-                </iframe>
+      <?php 
+      get_template_part('/buddypress/members/single/_moose-template-parts/athlete-profile-sports-stats');
+      ?>
 
-              </div>
+      <!-- SPORTS STATS SECTION END -->
 
-            </div>
-            <div class="col-sm-6 col-md-6">
+      <!-- ACADEMICS SECTION START -->
 
-              <div class="embed-responsive embed-responsive-16by9">
+      <?php 
+      get_template_part('/buddypress/members/single/_moose-template-parts/athlete-profile-academics');
+      ?>
 
-                <iframe class="embed-responsive-item mt-2"
-                  src="https://www.youtube.com/embed/<?php echo $video_3; ?>?autoplay=0&loop=0&controls=1&showinfo=0&rel=0"
-                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                  <!-- THE YOUTUBE VIDEO EMBED - RESPONSIVE - VIDEO ID INPUT ONLY -->
-                </iframe>
+      <!-- ACADEMICS SECTION END -->
 
-              </div>
+      <!-- INSTAGRAM SECTION -->
 
-            </div>
-            <div class="col-sm-6 col-md-6">
+      <?php 
+      get_template_part('/buddypress/members/single/_moose-template-parts/athlete-profile-instagram');
+      ?>
 
-              <div class="embed-responsive embed-responsive-16by9">
+      <!-- INSTAGRAM END -->
 
-                <iframe class="embed-responsive-item mt-2"
-                  src="https://www.youtube.com/embed/<?php echo $video_4; ?>?autoplay=0&loop=0&controls=1&showinfo=0&rel=0"
-                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                  <!-- THE YOUTUBE VIDEO EMBED - RESPONSIVE - VIDEO ID INPUT ONLY -->
-                </iframe>
+      <!-- INTERVIEW SECTION START -->
 
-              </div>
 
-            </div>
-            <div class="col-sm-6 col-md-6">
+      <?php 
+      get_template_part('/buddypress/members/single/_moose-template-parts/athlete-profile-interview');
+      ?>
 
-              <div class="embed-responsive embed-responsive-16by9">
 
-                <iframe class="embed-responsive-item mt-2"
-                  src="https://www.youtube.com/embed/<?php echo $video_5; ?>?autoplay=0&loop=0&controls=1&showinfo=0&rel=0"
-                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                  <!-- THE YOUTUBE VIDEO EMBED - RESPONSIVE - VIDEO ID INPUT ONLY -->
-                </iframe>
-
-              </div>
-
-            </div>
-
-        </section> <!-- end more-videos-box -->
-
-      </section> <!-- end top-video-section -->
-
-      <section id="about-section">
-
-        <h1 id="about" class="block-header">
-          <i class="fas fa-user-circle"></i> About
-        </h1>
-
-        <p class="text-content">
-          <?php echo $about; ?>
-        </p>
-
-      </section>
-
-      <section id="sports-info-section">
-
-        <h1 class="block-header">
-          <i class="fas fa-trophy"></i> Sports Info
-        </h1>
-
-        <p class="text-content">
-          <?php echo $sports_info; ?>
-        </p>
-
-      </section>
-
-      <section id="academics-section">
-
-        <h1 class="block-header">
-          <i class="fas fa-file-certificate"></i> Academics
-        </h1>
-
-        <div class="school-box clearfix p-4">
-          <span class="school-title float-left">SCHOOL NAME</span>
-          <span class="school-name float-right">
-
-            <?php echo $school_name; ?>
-
-          </span>
-        </div>
-
-        <div class="test-score-box row">
-          <div class="col-md-4">
-            <h1 class="test-score-title">GPA</h1>
-            <p class="text-content">
-              <?php echo $gpa; ?>
-            </p>
-          </div>
-          <div class="col-md-4">
-            <h1 class="test-score-title">SAT</h1>
-            <p class="text-content">
-              <?php echo $sat; ?>
-            </p>
-          </div>
-          <div class="col-md-4">
-            <h1 class="test-score-title">TOEFL</h1>
-            <p class="text-content">
-              <?php echo $toefl; ?>
-            </p>
-          </div>
-        </div>
-
-      </section>
-
-      <section id="instagram-section">
-
-        <h1 class="block-header">
-          <i class="fab fa-instagram"></i> Instagram
-        </h1>
-
-        <div class="row gallery-box">
-
-          <div class="col-sm-6 col-md-6 col-lg-6">
-
-            <div class="embed-responsive embed-responsive-1by1">
-
-              <?php echo $instagram_1; ?>
-
-            </div>
-
-          </div>
-
-          <div class="col-sm-6 col-md-6 col-lg-6">
-
-            <div class="embed-responsive embed-responsive-1by1">
-
-              <?php echo $instagram_2; ?>
-
-            </div>
-
-          </div>
-
-          <div class="col-sm-6 col-md-6 col-lg-6">
-
-            <div class="embed-responsive embed-responsive-1by1">
-
-              <?php echo $instagram_3; ?>
-
-            </div>
-
-          </div>
-
-          <div class="col-sm-6 col-md-6 col-lg-6">
-
-            <div class="embed-responsive embed-responsive-1by1">
-
-              <?php echo $instagram_4; ?>
-
-            </div>
-
-          </div>
-
-        </div> <!-- End Row -->
-
-      </section>
-
-      <section id="interview-section">
-
-        <h1 class="block-header">
-          <i class="fad fa-comments"></i> Interviews
-        </h1>
-
-        <p class="text-content">
-          <?php echo $interview; ?>
-        </p>
-
-      </section>
+      <!-- INTERVIEW SECTION END -->
 
 
       <!-- CUSTOM MOOSE MAGIC ENDS HERE FOR ATHLETE PROFILE  -->
@@ -417,7 +157,7 @@
   var adjustAnchor = function() {
 
     var $anchor = $(':target'),
-      fixedElementHeight = 370;
+      fixedElementHeight = 300;
 
     if ($anchor.length > 0) {
 

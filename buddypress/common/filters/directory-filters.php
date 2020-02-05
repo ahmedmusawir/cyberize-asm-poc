@@ -6,28 +6,29 @@
  * @version 3.0.0
  */
 ?>
-<style>
+<!-- <style>
 .bp-dir-filter {
 	border: 4px dotted green;
 }
 </style>
 <div class="bp-dir-filter">
-<h5><strong>directory-filters.php under common/filters folder</strong></h5>
+<h5><strong>directory-filters.php under common/filters folder</strong></h5> -->
 
 
 <div id="dir-filters" class="component-filters clearfix">
-	<div id="<?php bp_nouveau_filter_container_id(); ?>" class="last filter">
-		<label class="bp-screen-reader-text" for="<?php bp_nouveau_filter_id(); ?>">
-			<span ><?php bp_nouveau_filter_label(); ?></span>
-		</label>
-		<div class="select-wrap">
-			<select id="<?php bp_nouveau_filter_id(); ?>" data-bp-filter="<?php bp_nouveau_filter_component(); ?>">
+  <div id="<?php bp_nouveau_filter_container_id(); ?>" class="last filter">
+    <label class="bp-screen-reader-text" for="<?php bp_nouveau_filter_id(); ?>">
+      <span><?php bp_nouveau_filter_label(); ?></span>
+    </label>
+    <div class="select-wrap">
+      <select id="<?php bp_nouveau_filter_id(); ?>" data-bp-filter="<?php bp_nouveau_filter_component(); ?>">
 
-				<?php bp_nouveau_filter_options(); ?>
+        <?php bp_nouveau_filter_options(); ?>
 
-			</select>
-			<span class="select-arrow" aria-hidden="true"></span>
-		</div>
-	</div>
+      </select>
+      <span class="select-arrow" aria-hidden="true"></span>
+    </div>
+  </div>
 </div>
-</div> <!-- delete me (bp-dir-filter) -->
+
+<!-- </div> delete me (bp-dir-filter) -->

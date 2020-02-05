@@ -1,7 +1,7 @@
 <?php
 /**
  * BuddyPress - Groups Home
- *
+ * Template Name: BP Group Single
  * @since 3.0.0
  * @version 3.0.0
  */
@@ -18,7 +18,7 @@ if ( bp_has_groups() ) :
 </style>
 <div class="bp-group-single">
 
-  <h4><strong>home.php under groups/ folder</strong></h4>
+  <h4><strong>home.php under groups/single folder</strong></h4>
 
 
   <?php bp_nouveau_group_hook( 'before', 'home_content' ); ?>
