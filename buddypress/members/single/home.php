@@ -54,7 +54,9 @@
 <div class="bp-wrap">
   <?php if ( ! bp_nouveau_is_object_nav_in_sidebar() ) : ?>
 
+
   <?php //bp_get_template_part( 'members/single/parts/item-nav' ); ?>
+
 
   <?php endif; ?>
 
@@ -76,8 +78,10 @@
     <!-- CENTER COLUMN START -->
     <article class="col-sm-12 col-md-12 col-lg-8 col-xl-6">
 
+      <!-- THE EDIT MENU START -->
       <!-- FOLLOWING IS USED FOR THE PROFILE EDIT FUNCTION ONLY -->
       <?php bp_nouveau_member_template_part(); ?>
+      <!-- THE EDIT MENU END -->
 
       <?php //get_template_part( 'buddypress/members/single/parts/item-nav' ); ?>
       <?php //get_template_part( 'buddypress/members/single/parts/item-subnav' ); ?>
