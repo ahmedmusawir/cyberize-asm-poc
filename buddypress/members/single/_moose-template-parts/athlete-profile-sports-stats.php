@@ -37,10 +37,8 @@ $cheerleading_position = xprofile_get_field_data( 181, $user_id, $multi_format =
 // CROSS COUNTRY
 $cross_country_team_name = xprofile_get_field_data( 189, $user_id, $multi_format = 'array' );
 
-
 // CYCLING
 $cycling_team_name = xprofile_get_field_data( 187, $user_id, $multi_format = 'array' );
-
 
 // E-SPORTS 
 $e_sports_league_name = xprofile_get_field_data( 317, $user_id, $multi_format = 'array' );
@@ -48,18 +46,14 @@ $e_sports_preferred_game = xprofile_get_field_data( 318, $user_id, $multi_format
 $e_sports_global_rankings = xprofile_get_field_data( 319, $user_id, $multi_format = 'array' );
 $e_sports_national_rankings = xprofile_get_field_data( 320, $user_id, $multi_format = 'array' );
 
-
 // EQUESTRIAN
 $equestrian_team_name = xprofile_get_field_data( 188, $user_id, $multi_format = 'array' );
-
 
 // FENCING
 $fencing_team_name = xprofile_get_field_data( 182, $user_id, $multi_format = 'array' );
 
-
 // FIELD HOCKY
 $field_hockey_team_name = xprofile_get_field_data( 185, $user_id, $multi_format = 'array' );
-
 
 // GOLF
 $golf_handicap = xprofile_get_field_data( 301, $user_id, $multi_format = 'array' );
@@ -69,11 +63,9 @@ $golf_lowest_competitive_round = xprofile_get_field_data( 304, $user_id, $multi_
 $golf_club_distances = xprofile_get_field_data( 305, $user_id, $multi_format = 'array' );
 $golf_preferred_hand = xprofile_get_field_data( 306, $user_id, $multi_format = 'array' );
 
-
 // GYMNASTICS 
 $gymnastics_team_name = xprofile_get_field_data( 199, $user_id, $multi_format = 'array' );
-$gymnastics_discipline = xprofile_get_field_data( 200, $user_id, $multi_format = 'array' );
-
+$gymnastics_disciplines = xprofile_get_field_data( 200, $user_id, $multi_format = 'array' );
 
 // ICE HOCKEY
 $ice_hockey_team_name = xprofile_get_field_data( 149, $user_id, $multi_format = 'array' );
@@ -88,7 +80,6 @@ $lacrosse_position = xprofile_get_field_data( 145, $user_id, $multi_format = 'ar
 // RIFLE 
 $rifle_team_name = xprofile_get_field_data( 183, $user_id, $multi_format = 'array' );
 
-
 // ROWING 
 $rowing_team_name = xprofile_get_field_data( 140, $user_id, $multi_format = 'array' );
 $rowing_league_name = xprofile_get_field_data( 141, $user_id, $multi_format = 'array' );
@@ -101,7 +92,6 @@ $rugby_position = xprofile_get_field_data( 193, $user_id, $multi_format = 'array
 // SAILING 
 $sailing_team_name = xprofile_get_field_data( 184, $user_id, $multi_format = 'array' );
 
-
 // SOCCER 
 $soccer_team_name = xprofile_get_field_data( 137, $user_id, $multi_format = 'array' );
 $soccer_league_name = xprofile_get_field_data( 138, $user_id, $multi_format = 'array' );
@@ -113,7 +103,6 @@ $softball_league_name = xprofile_get_field_data( 213, $user_id, $multi_format = 
 $softball_primary_position = xprofile_get_field_data( 214, $user_id, $multi_format = 'array' );
 $softball_secondary_position = xprofile_get_field_data( 215, $user_id, $multi_format = 'array' );
 
-
 // SWIMMING & DIVING  
 $swimming_main_event_style = xprofile_get_field_data( 309, $user_id, $multi_format = 'array' );
 $swimming_secondary_event_style = xprofile_get_field_data( 310, $user_id, $multi_format = 'array' );
@@ -124,12 +113,10 @@ $tennis_itf = xprofile_get_field_data( 312, $user_id, $multi_format = 'array' );
 $tennis_preferred_hand = xprofile_get_field_data( 313, $user_id, $multi_format = 'array' );
 $tennis_national_ranking = xprofile_get_field_data( 316, $user_id, $multi_format = 'array' );
 
-
 // TRACK & FILED 
 $track_field_iaaf_ranking = xprofile_get_field_data( 321, $user_id, $multi_format = 'array' );
 $track_field_national_ranking = xprofile_get_field_data( 322, $user_id, $multi_format = 'array' );
 $track_field_discipline = xprofile_get_field_data( 323, $user_id, $multi_format = 'array' );
-
 
 // US FOOTBALL 
 $us_football_team_name = xprofile_get_field_data( 134, $user_id, $multi_format = 'array' );
@@ -142,16 +129,13 @@ $volleyball_team_name = xprofile_get_field_data( 146, $user_id, $multi_format = 
 $volleyball_league_name = xprofile_get_field_data( 147, $user_id, $multi_format = 'array' );
 $volleyball_position = xprofile_get_field_data( 148, $user_id, $multi_format = 'array' );
 
-
 // WATER POLO 
 $water_polo_team_name = xprofile_get_field_data( 190, $user_id, $multi_format = 'array' );
 $water_polo_position = xprofile_get_field_data( 191, $user_id, $multi_format = 'array' );
 
-
 // WRESTLING
 $wrestling_team_name = xprofile_get_field_data( 186, $user_id, $multi_format = 'array' );
  
-
 ?>
 
 <section id="sports-stats-section">
@@ -159,24 +143,411 @@ $wrestling_team_name = xprofile_get_field_data( 186, $user_id, $multi_format = '
   <h1 class="block-header">
     <i class="fas fa-trophy"></i> Sports Stats
   </h1>
-  <h5>Sports: <?php echo $sport; ?></h5>
+  <!-- <h5>Sports (REMOVE THIS): <?php echo $sport; ?></h5> -->
+
   <div class="table-responsive">
     <table class="table">
       <tbody>
         <tr>
-          <th scope="row">NCAA Clearinghouse ID #</th>
-          <td>Mark</td>
+          <th scope="row">NCAA Clearinghouse ID #:</th>
+          <td><?php echo $ncaa_id; ?></td>
         </tr>
         <tr>
-          <th scope="row">NAIA Clearinghouse ID #</th>
-          <td>Jacob</td>
+          <th scope="row">NAIA Clearinghouse ID #:</th>
+          <td><?php echo $naia_id ?></td>
         </tr>
+
+        <!-- BASEBALL -->
+        <?php if ($sport == 'BASEBALL') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td><?php echo $baseball_team_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">League Name:</th>
+          <td><?php echo $baseball_league_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Primary Position:</th>
+          <td><?php echo $baseball_primary_position; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Secondary Position:</th>
+          <td><?php echo $baseball_secondary_position; ?></td>
+        </tr>
+
+        <?php endif; ?>
+
+        <!-- BASKETBALL -->
+        <?php if ($sport == 'BASKETBALL') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td><?php echo $basketball_team_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">League Name:</th>
+          <td><?php echo $basketball_league_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Primary Position:</th>
+          <td><?php echo $basketball_primary_position; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Secondary Position:</th>
+          <td><?php echo $basketball_secondary_position; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Preferred Hand:</th>
+          <td><?php echo $basketball_preferred_hand; ?></td>
+        </tr>
+
+        <?php endif; ?>
+
+        <!-- BOWLING -->
+        <?php if ($sport == 'BOWLING') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td><?php echo $bowling_team_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">League Name:</th>
+          <td><?php echo $bowling_league_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Preferred Hand:</th>
+          <td><?php echo $bowling_preferred_hand; ?></td>
+        </tr>
+
+
+        <?php endif; ?>
+
+        <!-- CHEERLEADING -->
+        <?php if ($sport == 'CHEERLEADING') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td><?php echo $cheerleading_team_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">League Name:</th>
+          <td><?php echo $cheerleading_league_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Position:</th>
+          <td><?php echo $cheerleading_position; ?></td>
+        </tr>
+
+        <?php endif; ?>
+
+        <!-- CROSS COUNTRY -->
+        <?php if ($sport == 'CROSS COUNTRY') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td><?php echo $cross_country_team_name; ?></td>
+        </tr>
+
+        <?php endif; ?>
+
+        <!-- CYCLING -->
+        <?php if ($sport == 'CYCLING') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td><?php echo $cycling_team_name; ?></td>
+        </tr>
+
+
+        <?php endif; ?>
+
+        <!-- E-SPORTS -->
+        <?php if ($sport == 'E-SPORTS') : ?>
+
+        <tr>
+          <th scope="row">League Name:</th>
+          <td><?php echo $e_sports_league_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Preferred Game:</th>
+          <td><?php echo $e_sports_preferred_game; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Global Ranking:</th>
+          <td><?php echo $e_sports_global_rankings; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">National Rankings:</th>
+          <td><?php echo $e_sports_national_rankings; ?></td>
+        </tr>
+
+        <?php endif; ?>
+
+        <!-- EQUESTRAINS -->
+        <?php if ($sport == 'EQUESTRAIN') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td><?php echo $equestrian_team_name; ?></td>
+        </tr>
+
+        <?php endif; ?>
+
+        <!-- FENCING -->
+        <?php if ($sport == 'FENCING') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td><?php echo $fencing_team_name; ?></td>
+        </tr>
+
+        <?php endif; ?>
+
+        <!-- FIELD HOCKEY -->
+        <?php if ($sport == 'FIELD HOCKEY') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td><?php echo $field_hockey_team_name; ?></td>
+        </tr>
+
+        <?php endif; ?>
+
+        <!-- GOLF -->
+        <?php if ($sport == 'GOLF') : ?>
+
+        <tr>
+          <th scope="row">Handicap:</th>
+          <td><?php echo $golf_handicap; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">WAGR:</th>
+          <td><?php echo $golf_wagr; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">National Ranking:</th>
+          <td><?php echo $golf_national_ranking; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Lowest Competitive Round:</th>
+          <td><?php echo $golf_lowest_competitive_round; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Club Distances:</th>
+          <td><?php echo $golf_club_distances; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Preferred Hand:</th>
+          <td><?php echo $golf_preferred_hand; ?></td>
+        </tr>
+
+        <?php endif; ?>
+
+        <!-- GYMNASTICS -->
+        <?php if ($sport == 'GYMNASTICS') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td><?php echo $gymnastics_team_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Disciplines:</th>
+          <td><?php echo $gymnastics_disciplines; ?></td>
+        </tr>
+
+        <?php endif; ?>
+
+        <!-- ICE HOCKEY -->
+        <?php if ($sport == 'ICE HOCKEY') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td><?php echo $ice_hockey_team_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">League Name:</th>
+          <td><?php echo $ice_hockey_league_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Position:</th>
+          <td><?php echo $ice_hockey_position; ?></td>
+        </tr>
+
+        <?php endif; ?>
+
+        <!-- LACROSSE -->
+        <?php if ($sport == 'LACROSSE') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td><?php echo $lacrosse_team_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">League Name:</th>
+          <td><?php echo $lacrosse_league_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Position:</th>
+          <td><?php echo $lacrosse_position; ?></td>
+        </tr>
+
+        <?php endif; ?>
+
+        <!-- RIFLE -->
+        <?php if ($sport == 'RIFLE') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td><?php echo $rifle_team_name; ?></td>
+        </tr>
+
+        <?php endif; ?>
+
+        <!-- ROWING -->
+        <?php if ($sport == 'ROWING') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td><?php echo $rowing_team_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">League Name:</th>
+          <td><?php echo $rowing_league_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Position:</th>
+          <td><?php echo $rowing_position; ?></td>
+        </tr>
+
+        <?php endif; ?>
+
+        <!-- RUGBY -->
+        <?php if ($sport == 'RUGBY') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td><?php echo $rugby_team_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Position:</th>
+          <td><?php echo $rugby_position; ?></td>
+        </tr>
+
+        <?php endif; ?>
+
+        <!-- SAILING -->
+        <?php if ($sport == 'SAILING') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td><?php echo $sailing_team_name; ?></td>
+        </tr>
+
+        <?php endif; ?>
+
+        <!-- SOCCER -->
+        <?php if ($sport == 'SOCCER') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td><?php echo $soccer_team_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">League Name:</th>
+          <td><?php echo $soccer_league_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Position:</th>
+          <td><?php echo $soccer_position; ?></td>
+        </tr>
+
+        <?php endif; ?>
+
+        <!-- SOFTBALL -->
+        <?php if ($sport == 'SOFTBALL') : ?>
+
         <tr>
           <th scope="row">Team Name:</th>
           <td>@twitter</td>
         </tr>
+
+        <?php endif; ?>
+
+        <!-- SWIMMING & DIVING -->
+        <?php if ($sport == 'SWIMMING & DIVING') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td>@twitter</td>
+        </tr>
+
+        <?php endif; ?>
+
+        <!-- TENNIS -->
+        <?php if ($sport == 'TENNIS') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td>@twitter</td>
+        </tr>
+
+        <?php endif; ?>
+
+        <!-- TRACK & FIELD -->
+        <?php if ($sport == 'TRACK & FIELD') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td>@twitter</td>
+        </tr>
+
+        <?php endif; ?>
+
+        <!-- US FOOTBALL -->
+        <?php if ($sport == 'US FOOTBALL') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td>@twitter</td>
+        </tr>
+
+        <?php endif; ?>
+
+        <!-- VOLLEYBALL -->
+        <?php if ($sport == 'VOLLEYBALL') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td>@twitter</td>
+        </tr>
+
+        <?php endif; ?>
+
+        <!-- WATER POLO -->
+        <?php if ($sport == 'WATER POLO') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td>@twitter</td>
+        </tr>
+
+        <?php endif; ?>
+
+        <!-- WRESTLING -->
+        <?php if ($sport == 'WRESTLING') : ?>
+
+        <tr>
+          <th scope="row">Team Name:</th>
+          <td>@twitter</td>
+        </tr>
+
+        <?php endif; ?>
+
       </tbody>
     </table>
+    <!-- SPORTS STATS TABLE END -->
   </div>
   <hr>
   <h4 class="sports-stats-title">
