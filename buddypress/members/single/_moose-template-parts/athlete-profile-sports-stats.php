@@ -470,17 +470,33 @@ $wrestling_team_name = xprofile_get_field_data( 186, $user_id, $multi_format = '
 
         <tr>
           <th scope="row">Team Name:</th>
-          <td>@twitter</td>
+          <td><?php echo $softball_team_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">League Name:</th>
+          <td><?php echo $softball_league_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Primary Position:</th>
+          <td><?php echo $softball_primary_position; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Secondary Position:</th>
+          <td><?php echo $softball_secondary_position; ?></td>
         </tr>
 
         <?php endif; ?>
 
         <!-- SWIMMING & DIVING -->
-        <?php if ($sport == 'SWIMMING & DIVING') : ?>
+        <?php if ($sport == 'SWIMMING AND DIVING') : ?>
 
         <tr>
-          <th scope="row">Team Name:</th>
-          <td>@twitter</td>
+          <th scope="row">Main Event Style:</th>
+          <td><?php echo $swimming_main_event_style; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Secondary Event Style:</th>
+          <td><?php echo $swimming_secondary_event_style; ?></td>
         </tr>
 
         <?php endif; ?>
@@ -489,18 +505,38 @@ $wrestling_team_name = xprofile_get_field_data( 186, $user_id, $multi_format = '
         <?php if ($sport == 'TENNIS') : ?>
 
         <tr>
-          <th scope="row">Team Name:</th>
-          <td>@twitter</td>
+          <th scope="row">UTR:</th>
+          <td><?php echo $tennis_utr; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">ITF:</th>
+          <td><?php echo $tennis_itf; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Preferred Hand:</th>
+          <td><?php echo $tennis_preferred_hand; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">National Ranking:</th>
+          <td><?php echo $tennis_national_ranking; ?></td>
         </tr>
 
         <?php endif; ?>
 
         <!-- TRACK & FIELD -->
-        <?php if ($sport == 'TRACK & FIELD') : ?>
+        <?php if ($sport == 'TRACK AND FIELD') : ?>
 
         <tr>
-          <th scope="row">Team Name:</th>
-          <td>@twitter</td>
+          <th scope="row">IAAF:</th>
+          <td><?php echo $track_field_iaaf_ranking; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">National Ranking:</th>
+          <td><?php echo $track_field_national_ranking; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Discipline:</th>
+          <td><?php echo $track_field_discipline; ?></td>
         </tr>
 
         <?php endif; ?>
@@ -510,7 +546,19 @@ $wrestling_team_name = xprofile_get_field_data( 186, $user_id, $multi_format = '
 
         <tr>
           <th scope="row">Team Name:</th>
-          <td>@twitter</td>
+          <td><?php echo $us_football_team_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">League Name:</th>
+          <td><?php echo $us_football_league_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Position:</th>
+          <td><?php echo $us_football_position; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">40 Yard Dash:</th>
+          <td><?php echo $us_football_40_yard_dash; ?></td>
         </tr>
 
         <?php endif; ?>
@@ -520,7 +568,15 @@ $wrestling_team_name = xprofile_get_field_data( 186, $user_id, $multi_format = '
 
         <tr>
           <th scope="row">Team Name:</th>
-          <td>@twitter</td>
+          <td><?php echo $volleyball_team_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">League Name:</th>
+          <td><?php echo $volleyball_league_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Position:</th>
+          <td><?php echo $volleyball_position; ?></td>
         </tr>
 
         <?php endif; ?>
@@ -530,7 +586,11 @@ $wrestling_team_name = xprofile_get_field_data( 186, $user_id, $multi_format = '
 
         <tr>
           <th scope="row">Team Name:</th>
-          <td>@twitter</td>
+          <td><?php echo $water_polo_team_name; ?></td>
+        </tr>
+        <tr>
+          <th scope="row">Position:</th>
+          <td><?php echo $water_polo_position; ?></td>
         </tr>
 
         <?php endif; ?>
@@ -540,7 +600,7 @@ $wrestling_team_name = xprofile_get_field_data( 186, $user_id, $multi_format = '
 
         <tr>
           <th scope="row">Team Name:</th>
-          <td>@twitter</td>
+          <td><?php echo $wrestling_team_name; ?></td>
         </tr>
 
         <?php endif; ?>
@@ -550,27 +610,27 @@ $wrestling_team_name = xprofile_get_field_data( 186, $user_id, $multi_format = '
     <!-- SPORTS STATS TABLE END -->
   </div>
   <hr>
-  <h4 class="sports-stats-title">
+  <h5 class="sports-stats-title">
     Sport Achievement Summary
-  </h4>
+  </h5>
 
   <p class="text-content">
     <?php echo $achievement_summary; ?>
   </p>
   <hr>
 
-  <h4 class="sports-stats-title">
+  <h5 class="sports-stats-title">
     Awards & Press
-  </h4>
+  </h5>
 
   <p class="text-content">
     <?php echo $award_press; ?>
   </p>
   <hr>
 
-  <h4 class="sports-stats-title">
+  <h5 class="sports-stats-title">
     References
-  </h4>
+  </h5>
 
   <article class="text-content">
     <?php echo $reference; ?>
