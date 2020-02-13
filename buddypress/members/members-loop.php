@@ -7,76 +7,102 @@
  */
 
 bp_nouveau_before_loop(); ?>
+<script src="https://kit.fontawesome.com/c8084101a0.js" crossorigin="anonymous"></script>
 
-<?php if ( bp_get_current_member_type() ) : ?>
-	<p class="current-member-type"><?php bp_current_member_type_message(); ?></p>
-<?php endif; ?>
+<section id="athlete-index-container" class="container-fluid">
 
-<?php if ( bp_has_members( bp_ajax_querystring( 'members' ) ) ) : ?>
+  <div class="row">
 
-	<?php bp_nouveau_pagination( 'top' ); ?>
+    <div class="col-md-9">
 
-	<ul id="members-list" class="<?php bp_nouveau_loop_classes(); ?>">
+      <?php if ( bp_has_members( bp_ajax_querystring( 'members' ) ) ) : ?>
 
-	<?php while ( bp_members() ) : bp_the_member(); ?>
+      <?php bp_nouveau_pagination( 'top' ); ?>
 
-		<li <?php bp_member_class( array( 'item-entry' ) ); ?> data-bp-item-id="<?php bp_member_user_id(); ?>" data-bp-item-component="members">
-			<div class="list-wrap">
+      <ul id="members-list-asm" class="<?php bp_nouveau_loop_classes(); ?>">
 
-				<div class="item-avatar">
-					<a href="<?php bp_member_permalink(); ?>"><?php bp_member_avatar( bp_nouveau_avatar_args() ); ?></a>
-				</div>
+        <?php while ( bp_members() ) : bp_the_member(); ?>
 
-				<div class="item">
+        <?php 
+        $user_id = bp_get_member_user_id();
 
-					<div class="item-block">
+        // ABOUT
+        $sport = xprofile_get_field_data( 49, $user_id, $multi_format = 'array' );
+        $about = xprofile_get_field_data( 28, $user_id, $multi_format = 'array' );
+        $excerpt = substr($about, 0, 200) . '...';
+        $nationality = xprofile_get_field_data( 11, $user_id, $multi_format = 'array' );
+        $enrollment_year = xprofile_get_field_data( 17, $user_id, $multi_format = 'array' ); 
+       
+        ?>
 
-						<h2 class="list-title member-name">
-							<a href="<?php bp_member_permalink(); ?>"><?php bp_member_name(); ?></a>
-						</h2>
+        <li <?php bp_member_class( array( 'item-entry-asm' ) ); ?> data-bp-item-id="<?php bp_member_user_id(); ?>"
+          data-bp-item-component="members">
+          <div class="list-wrap-asm row">
 
-						<?php if ( bp_nouveau_member_has_meta() ) : ?>
-							<p class="item-meta last-activity">
-								<?php bp_nouveau_member_meta(); ?>
-							</p><!-- #item-meta -->
-						<?php endif; ?>
+            <article class="col-md-4">
+              <div class="item-avatar-asm">
+                <a href="<?php bp_member_permalink(); ?>"><?php bp_member_avatar( bp_nouveau_avatar_args() ); ?></a>
+              </div>
+            </article>
+            <article class="col-md-8">
+              <div class="item-asm">
 
-						<?php
-						bp_nouveau_members_loop_buttons(
-							array(
-								'container'      => 'ul',
-								'button_element' => 'button',
-							)
-						);
-?>
+                <div class="item-block-asm">
 
-					</div>
+                  <h2 class="list-title member-name">
+                    <a href="<?php bp_member_permalink(); ?>"><?php bp_member_name(); ?></a>
+                    <!-- (<?php echo bp_get_member_user_id(); ?>) -->
+                    <small>(<?php echo $sport; ?>)</small>
+                  </h2>
 
-					<?php if ( bp_get_member_latest_update() && ! bp_nouveau_loop_is_grid() ) : ?>
-					<div class="user-update">
-						<p class="update"> <?php bp_member_latest_update(); ?></p>
-					</div>
-						<?php endif; ?>
+                  <ul class="list-inline info-bar">
+                    <li class="list-inline-item"><i class="fas fa-globe"></i> &nbsp;Residence:
+                      <?php echo $nationality; ?></li>
+                    <li class="list-inline-item"><i class="fas fa-eye"></i> &nbsp;993 Profile Views</li>
+                    <li class="list-inline-item"><i class="fas fa-users-class"></i>&nbsp;Class:
+                      <?php echo $enrollment_year; ?> </li>
+                  </ul>
 
-				</div><!-- // .item -->
+                  <div class="text-content">
+                    <?php echo $excerpt; ?>
+                    <h5 class="readmore"><a href="<?php bp_member_permalink(); ?>">[View Athlete...]</a></h5>
+                  </div>
 
 
+                </div> <!-- end item-block -->
 
-			</div>
-		</li>
+              </div><!-- // .item -->
 
-	<?php endwhile; ?>
+            </article>
 
-	</ul>
+          </div>
+        </li>
 
-	<?php bp_nouveau_pagination( 'bottom' ); ?>
+        <?php endwhile; ?>
 
-<?php
+      </ul>
+
+      <?php bp_nouveau_pagination( 'bottom' ); ?>
+
+      <?php
 else :
 
 	bp_nouveau_user_feedback( 'members-loop-none' );
 
 endif;
 ?>
+
+
+    </div>
+    <div class="col-md-3">
+
+      <img class="img-fluid" src="/wp-content/uploads/2020/01/profile-sidebar.png" alt="">
+
+    </div>
+
+  </div>
+
+</section>
+
 
 <?php bp_nouveau_after_loop(); ?>

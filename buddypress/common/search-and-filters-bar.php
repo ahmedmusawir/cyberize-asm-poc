@@ -6,38 +6,34 @@
  * @version 3.1.0
  */
 ?>
-<!-- <style>
-.bp-search-filter {
-	border: 4px dotted dodgerblue;
-}
-</style>
-<div class="bp-search-filter">
-<h4><strong>search-and-filters-bar.php under common folder</strong></h4> -->
+
 
 <div class="subnav-filters filters no-ajax" id="subnav-filters">
 
-  <?php if ( 'friends' !== bp_current_component() ) : ?>
-  <div class="subnav-search clearfix">
+  <div class="subnav-search-asm float-left pl-5">
 
-    <?php if ( 'activity' === bp_current_component() ) : ?>
-    <div class="feed"><a href="<?php bp_sitewide_activity_feed_link(); ?>" class="bp-tooltip"
-        data-bp-tooltip="<?php esc_attr_e( 'RSS Feed', 'buddypress' ); ?>"><span
-          class="bp-screen-reader-text"><?php esc_html_e( 'RSS', 'buddypress' ); ?></span></a></div>
-    <?php endif; ?>
+    <h5 class="text-light float-left pr-3">Athletes: </h5>
+    <div class="search-form-box float-left">
+      <?php bp_nouveau_search_form(); ?>
 
-    <?php bp_nouveau_search_form(); ?>
+    </div>
 
   </div>
-  <?php endif; ?>
+  <div class="subnav-filter-asm float-right pr-5">
 
-  <?php if ( bp_is_user() && ! bp_is_current_action( 'requests' ) ) : ?>
-  <?php bp_get_template_part( 'common/filters/user-screens-filters' ); ?>
-  <?php elseif ( 'groups' === bp_current_component() ) : ?>
-  <?php bp_get_template_part( 'common/filters/groups-screens-filters' ); ?>
-  <?php else : ?>
-  <?php bp_get_template_part( 'common/filters/directory-filters' ); ?>
-  <?php endif; ?>
+    <h5 class="text-light float-left pr-3">Filters: </h5>
+    <div class="filter-box float-right">
+      <?php if ( bp_is_user() && ! bp_is_current_action( 'requests' ) ) : ?>
+      <?php bp_get_template_part( 'common/filters/user-screens-filters' ); ?>
+      <?php elseif ( 'groups' === bp_current_component() ) : ?>
+      <?php bp_get_template_part( 'common/filters/groups-screens-filters' ); ?>
+      <?php else : ?>
+      <?php bp_get_template_part( 'common/filters/directory-filters' ); ?>
+      <?php endif; ?>
+
+    </div>
+
+  </div>
+
 
 </div><!-- search & filters -->
-
-<!-- </div>delete me -->

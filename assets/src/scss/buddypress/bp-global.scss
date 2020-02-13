@@ -245,3 +245,56 @@
 /**
  * ATHLETE INDEX
  */
+#athlete-index {
+  // border: 4px dotted pink;
+  position: relative;
+
+  .search-menu-container {
+    position: fixed;
+    background-color: $cg-secondary;
+    width: 100%;
+    height: 80px;
+    z-index: 100;
+  }
+  #members-dir-list {
+    padding-top: 80px;
+  }
+
+  #athlete-index-container {
+    // border: 4px solid red;
+    .item-entry-asm {
+      box-shadow: 2px 2px 6px #e3e3e3;
+    }
+
+    .item-asm {
+      .item-block-asm {
+        .member-name {
+          font-weight: 600;
+          a {
+            color: $cg-primary;
+          }
+        }
+
+        .info-bar {
+          // border: 3px dotted red;
+          .list-inline-item {
+            font-size: 1rem;
+            font-weight: 700;
+            color: lighten($color: $cg-primary, $amount: 10%);
+          }
+        }
+
+        .text-content {
+          padding-right: 2rem;
+          color: $cg-primary;
+
+          .readmore {
+            a {
+              color: lighten($color: $cg-primary, $amount: 20%);
+            }
+          }
+        }
+      }
+    }
+  }
+}

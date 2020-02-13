@@ -2,16 +2,16 @@
 $user_id = bp_displayed_user_id();
 
   // VIDEOS
-  $video_1 = '';
-  $video_2 = '';
-  $video_3 = '';
-  $video_4 = '';
-  $video_5 = '';
-  // $video_1 = xprofile_get_field_data( 31, $user_id, $multi_format = 'array' );
-  // $video_2 = xprofile_get_field_data( 29, $user_id, $multi_format = 'array' );
-  // $video_3 = xprofile_get_field_data( 32, $user_id, $multi_format = 'array' );
-  // $video_4 = xprofile_get_field_data( 33, $user_id, $multi_format = 'array' );
-  // $video_5 = xprofile_get_field_data( 34, $user_id, $multi_format = 'array' );
+  // $video_1 = '';
+  // $video_2 = '';
+  // $video_3 = '';
+  // $video_4 = '';
+  // $video_5 = '';
+  $video_1 = xprofile_get_field_data( 31, $user_id, $multi_format = 'array' );
+  $video_2 = xprofile_get_field_data( 29, $user_id, $multi_format = 'array' );
+  $video_3 = xprofile_get_field_data( 32, $user_id, $multi_format = 'array' );
+  $video_4 = xprofile_get_field_data( 33, $user_id, $multi_format = 'array' );
+  $video_5 = xprofile_get_field_data( 34, $user_id, $multi_format = 'array' );
 
 
 ?>

@@ -2,14 +2,14 @@
 $user_id = bp_displayed_user_id();
 
 // INSTAGRAM
-$instagram_1 = '';
-$instagram_2 = '';
-$instagram_3 = '';
-$instagram_4 = '';
-// $instagram_1 = xprofile_get_field_data( 25, $user_id, $multi_format = 'array' );
-// $instagram_2 = xprofile_get_field_data( 26, $user_id, $multi_format = 'array' );
-// $instagram_3 = xprofile_get_field_data( 35, $user_id, $multi_format = 'array' );
-// $instagram_4 = xprofile_get_field_data( 36, $user_id, $multi_format = 'array' ); 
+// $instagram_1 = '';
+// $instagram_2 = '';
+// $instagram_3 = '';
+// $instagram_4 = '';
+$instagram_1 = xprofile_get_field_data( 25, $user_id, $multi_format = 'array' );
+$instagram_2 = xprofile_get_field_data( 26, $user_id, $multi_format = 'array' );
+$instagram_3 = xprofile_get_field_data( 35, $user_id, $multi_format = 'array' );
+$instagram_4 = xprofile_get_field_data( 36, $user_id, $multi_format = 'array' ); 
  
 ?>
 
