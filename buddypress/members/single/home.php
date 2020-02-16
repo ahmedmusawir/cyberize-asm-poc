@@ -9,21 +9,6 @@
 <!-- FONT AWESOME 5 PRO -->
 <script src="https://kit.fontawesome.com/c8084101a0.js" crossorigin="anonymous"></script>
 
-
-<?php 
-  // $user_id = bp_displayed_user_id();
-
-  // echo "<h1>$user_id</h1>";
-  // echo "<h1>Data: $data</h1>";
-
-  // echo '<pre>';
-  // print_r($data);
-  // echo '</pre>';
-
-  ?>
-
-<!-- MOOSE BP TESTING END -->
-
 <div class="top-page-navbar">
 
   <section class="top-page-menu clearfix">
@@ -162,7 +147,7 @@
   var adjustAnchor = function() {
 
     var $anchor = $(':target'),
-      fixedElementHeight = 300;
+      fixedElementHeight = 220;
 
     if ($anchor.length > 0) {
 

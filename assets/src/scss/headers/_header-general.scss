@@ -21,7 +21,7 @@
     .main-nav {
       display: flex;
       align-items: center !important;
-      padding-top: 1rem;
+      // padding-top: 1rem;
     }
   }
 
@@ -63,16 +63,14 @@
     }
 
     &:hover > a {
-      color: #fff;
+      // color: #fff;
       border-bottom: 4px solid red;
-      // background: #4d4d4d;
-      // background: red;
     }
   }
 
   a {
     display: block;
-    padding: 1.3em 1em;
+    padding: 0.5em 1em;
     font-size: 1rem;
     text-decoration: none;
     line-height: 1.3em;

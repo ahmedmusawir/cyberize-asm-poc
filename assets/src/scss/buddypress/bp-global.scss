@@ -1,7 +1,11 @@
 .container-fluid {
   padding: 0 !important;
 }
-
+body.buddypress {
+  .site-content {
+    padding-top: 0 !important;
+  }
+}
 /**
  * ATHLETE SINGLE PROFILE
  */
@@ -11,6 +15,7 @@
 
   .top-page-navbar {
     position: fixed;
+    top: 65px;
     width: 100%;
     z-index: 100;
     .top-page-menu {
@@ -50,13 +55,14 @@
 
   .bp-wrap {
     #item-body {
-      margin-top: 150px;
+      margin-top: 25px;
       position: relative;
 
       //  LEFT COLUMN START
 
       .athlete-info-box {
         position: fixed;
+        top: 190px;
         width: 23%;
         @media (max-width: 1199px) {
           width: 30%;
@@ -251,7 +257,9 @@
   position: relative;
 
   .search-menu-container {
+    // border: 4px dotted pink;
     position: fixed;
+    top: 65px;
     background-color: $cg-secondary;
     width: 100%;
     height: 80px;
@@ -280,7 +288,7 @@
     }
   }
   #members-dir-list {
-    padding-top: 100px;
+    // padding-top: 100px;
   }
 
   #athlete-index-container {
