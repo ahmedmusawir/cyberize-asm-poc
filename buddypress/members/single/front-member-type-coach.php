@@ -23,7 +23,6 @@
   ?>
 
 <!-- MOOSE BP TESTING END -->
-
 <div class="top-page-navbar">
 
   <section class="top-page-menu clearfix">
@@ -89,9 +88,9 @@
       <!-- ---------------------------------------------->
 
       <!-- CUSTOM MOOSE MAGIC STARTS HERE FOR ATHLETE PROFILE  -->
-      <!-- <h1 class="display-4">Da Moose is Loose</h1> -->
 
       <!-- TOP VIDEO SECTION START -->
+      <h1 class="display-4">Da Moose is Loose</h1>
 
       <?php 
       get_template_part('/buddypress/members/single/_moose-template-parts/athlete-profile-video');

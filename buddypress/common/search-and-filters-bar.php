@@ -12,8 +12,9 @@
 
   <div class="subnav-search-asm float-left pl-5">
 
-    <h5 class="text-light float-left pr-3">Athletes: </h5>
+    <h4 class="nav-title text-light float-left pr-3">Athletes: </h4>
     <div class="search-form-box float-left">
+
       <?php bp_nouveau_search_form(); ?>
 
     </div>
@@ -21,7 +22,7 @@
   </div>
   <div class="subnav-filter-asm float-right pr-5">
 
-    <h5 class="text-light float-left pr-3">Filters: </h5>
+    <h4 class="nav-title text-light float-left pr-3">Filters: </h4>
     <div class="filter-box float-right">
       <?php if ( bp_is_user() && ! bp_is_current_action( 'requests' ) ) : ?>
       <?php bp_get_template_part( 'common/filters/user-screens-filters' ); ?>
