@@ -13,6 +13,10 @@ body.buddypress {
 #buddypress {
   position: relative;
 
+  #change-cover-image-personal-li {
+    display: none;
+  }
+
   .top-page-navbar {
     position: fixed;
     top: 65px;
@@ -54,6 +58,8 @@ body.buddypress {
   }
 
   .bp-wrap {
+    margin-top: 120px;
+
     #item-body {
       margin-top: 25px;
       position: relative;
@@ -132,7 +138,6 @@ body.buddypress {
       }
 
       #top-video-section {
-        // border: 0.3rem dotted red;
         padding-bottom: 3.5rem;
         border-bottom: 2px solid $cg-primary;
 

@@ -73,20 +73,6 @@ body.logged-in {
   padding-top: 18px !important;
 }
 
-/**
- *
- * Page Contaier
- *
- */
-
-#primary {
-  // background: white;
-  .container {
-    // border: 1rem solid blue;
-    // background: white;
-  }
-}
-
 #content {
   min-height: 100%;
 }
@@ -109,15 +95,15 @@ a {
  * WP Admin Bar Lowering
  *
  */
-.logged-in {
-  .navbar.fixed-top {
-    top: 32px;
-    // border: 1px solid red;
-  }
-  body.admin-bar {
-    top: 0px !important;
-  }
-}
+// .logged-in {
+//   .navbar.fixed-top {
+//     top: 32px;
+//     border: 1px solid red;
+//   }
+//   body.admin-bar {
+//     top: 0px !important;
+//   }
+// }
 
 .block-after-header {
   background-color: $cg-primary-light;
