@@ -10,25 +10,19 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-single'); ?>>
-  <section class="post-lovehealth">
-
-    <figure class="featured-img-holder">
-      <?php cyberize_post_thumbnail(); ?>
-    </figure>
+  <section class="post-asm">
 
     <div class="entry-content container-fluid">
 
-      <!--<h1 class="blog-index-title col-sm-6 col-md-3 col-lg-3 text-center">
-				<?php //the_field('blog_index_title', 'option') ?>
-				BLOG POST
-			</h1>
-			<div class="long-underline"></div>-->
-
       <div class="row">
 
-        <div class="col-sm-12 col-md-12 col-lg-8">
+        <div class="col-sm-12 col-md-12 col-lg-9">
 
-          <main class="">
+          <figure class="featured-img-holder">
+            <?php cyberize_post_thumbnail(); ?>
+          </figure>
+
+          <main class="main-content">
             <!-- CATEGORY -->
             <div class="FL-post-item-footer d-none">
               <?php cyberize_entry_footer(); ?>
@@ -43,7 +37,7 @@
 						endif;
 
 						if ( 'post' === get_post_type() ) : ?>
-            <div class="entry-meta pl-2 mb-5 d-none">
+            <div class="entry-meta pl-2 mb-5">
               <?php
 								cyberize_posted_by();
 								cyberize_posted_on();
@@ -53,20 +47,20 @@
             <?php
 						endif; ?>
 
+            <?php	the_content(); ?>
+
           </main>
 
-
           <?php
-						the_content();
-
-
 						// If comments are open or we have at least one comment, load up the comment template.
 						if ( comments_open() || get_comments_number() ) :
 							comments_template();
 						endif;
-					?>
+          ?>
+
+
         </div> <!-- 8 COLS END -->
-        <div class="col-sm-12 col-md-12 col-lg-4">
+        <div class="col-sm-12 col-md-12 col-lg-3">
 
           <?php get_sidebar(); ?>
 

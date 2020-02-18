@@ -14,19 +14,19 @@ $user_id = bp_displayed_user_id();
 
 <section class="athlete-info-box">
   <div id="item-header-avatar">
-    <a href="<?php bp_displayed_user_link(); ?>">
+    <!-- <a href="<?php bp_displayed_user_link(); ?>"> -->
 
-      <div class="athlete-img-box text-center">
+    <div class="athlete-img-box text-center">
 
-        <?php bp_displayed_user_avatar( 'type=full' ); ?>
+      <?php bp_displayed_user_avatar( 'type=full' ); ?>
 
-      </div>
-      <h1 class="athlete-title text-center">
+    </div>
+    <h1 class="athlete-title text-center">
 
-        <?php echo bp_core_get_user_displayname( $user_id, true ); ?>
+      <?php echo bp_core_get_user_displayname( $user_id, true ); ?>
 
-      </h1>
-    </a>
+    </h1>
+    <!-- </a> -->
   </div><!-- #item-header-avatar -->
 
   <section class="athlete-meta">

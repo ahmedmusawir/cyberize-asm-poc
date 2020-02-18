@@ -9,14 +9,23 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
-	<!-- <div class="row"> -->
-		<main id="main" class="site-main">
+<div id="primary" class="content-area single-post-asm">
+  <!-- <div class="row"> -->
+  <main id="main" class="site-main">
 
-			<?php
+    <!-- Page Header with image -->
+    <section id="general-blog-page-header">
+      <section class="top-page-menu clearfix">
+
+        <h3 class="menu-title float-left">Get Recruited</h3>
+
+      </section>
+    </section>
+
+    <?php
 			while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', 'post-single-lovehealth' );
+				get_template_part( 'template-parts/content', 'post-single-asm-sidebar' );
 
 				// If comments are open or we have at least one comment, load up the comment template.
 				// if ( comments_open() || get_comments_number() ) :
@@ -24,15 +33,15 @@ get_header(); ?>
 				// endif;
 			?>
 
-			<?php
+    <?php
 
 			endwhile; // End of the loop.
 
 			?>
 
-		</main><!-- #main -->
+  </main><!-- #main -->
 
-	<!-- </div> END ROW -->
+  <!-- </div> END ROW -->
 </div><!-- #primary -->
 
 

@@ -33,7 +33,7 @@
 
         <div class="row">
 
-          <div class="col-sm-12 col-md-12 col-lg-9">
+          <div class="col-sm-12 col-md-12 col-lg-8">
 
             <div class="blog-index-header py-3">
               <h2 class="header-title">All Article and Videos</h2>
@@ -74,7 +74,7 @@
 
           </div> <!-- 9 COLS END -->
 
-          <div class="col-sm-12 col-md-12 col-lg-3">
+          <div class="col-sm-12 col-md-12 col-lg-4">
 
             <?php get_sidebar(); ?>
 

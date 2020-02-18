@@ -126,7 +126,9 @@ get_header();
       <!-- CENTER COLUMN END -->
 
       <article class="col-sm-12 col-md-12 col-lg-12 col-xl-3">
-        <img src="/wp-content/uploads/2020/01/profile-sidebar.png" alt="">
+        <!-- <img src="/wp-content/uploads/2020/01/profile-sidebar.png" alt=""> -->
+        <?php get_sidebar(); ?>
+
       </article>
 
     </div><!-- #item-body -->
