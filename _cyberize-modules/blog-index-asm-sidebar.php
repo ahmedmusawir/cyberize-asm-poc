@@ -14,25 +14,22 @@
       <!-- Page Header with image -->
       <section id="general-blog-page-header">
         <section class="top-page-menu clearfix">
-          <h3 class="menu-title float-left">Get Recruited</h3>
+          <h3 class="menu-title float-left">Filters:</h3>
           <ul class="list-inline menu-box">
             <a href="#top-video-section">
-              <li class="list-inline-item"><i class="fad fa-video"></i>Video</li>
+              <li class="list-inline-item">All</li>
             </a>
             <a href="#about-section">
-              <li class="list-inline-item"><i class="fad fa-user-circle"></i>Bio</li>
+              <li class="list-inline-item">Videos</li>
             </a>
             <a href="#sports-stats-section">
-              <li class="list-inline-item"><i class="fad fa-trophy-alt"></i></i>Sports Stats</li>
+              <li class="list-inline-item">Academics</li>
             </a>
             <a href="#academics-section">
-              <li class="list-inline-item"><i class="fad fa-file-certificate"></i>Academics</li>
+              <li class="list-inline-item">Events</li>
             </a>
             <a href="#instagram-section">
-              <li class="list-inline-item"><i class="fab fa-instagram"></i>Instagram</li>
-            </a>
-            <a href="#interview-section">
-              <li class="list-inline-item"><i class="fad fa-comments"></i>Interviews</li>
+              <li class="list-inline-item">Blog</li>
             </a>
           </ul>
         </section>
@@ -44,20 +41,15 @@
 
           <div class="col-sm-12 col-md-12 col-lg-9">
 
+            <div class="blog-index-header py-3">
+              <h2 class="header-title">All Article and Videos</h2>
+              <h5 class="header-title">Browse on dozens of articles and find the right one for you</h5>
+            </div>
+
             <article class="post-item-container">
 
-              <?php
-								if ( have_posts() ) :
-
-									if ( is_home() && ! is_front_page() ) : ?>
-              <header>
-                <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-              </header>
-
-              <?php
-									endif;
-									?>
-              <div class="">
+              <?php	if ( have_posts() ) :	?>
+              <div class="masonry">
                 <?php
 									/* Start the Loop */
 									while ( have_posts() ) : the_post();

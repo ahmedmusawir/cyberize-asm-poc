@@ -8,23 +8,23 @@
  */
 
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('post-item'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('post-item item'); ?>>
 
-		<div class="entry-content">
+  <div class="entry-content">
 
-			<?php if (has_post_thumbnail()) : ?>
+    <?php if (has_post_thumbnail()) : ?>
 
-				<figure class="featured-image-box">
-					<a href="<?php the_permalink(); ?>">
-						<?php the_post_thumbnail( 'full' ); ?>
-					</a>
-				</figure>
+    <figure class="featured-image-box">
+      <a href="<?php the_permalink(); ?>">
+        <?php the_post_thumbnail( 'full' ); ?>
+      </a>
+    </figure>
 
-				<div class="FL-post-item-footer d-none">
-					<?php cyberize_entry_footer(); ?>
-				</div>
+    <div class="FL-post-item-footer d-none">
+      <?php cyberize_entry_footer(); ?>
+    </div>
 
-				<?php
+    <?php
 				if ( is_singular() ) :
 					the_title( '<h1 class="entry-title">', '</h1>' );
 				else :
@@ -33,29 +33,29 @@
 
 				?>
 
-				<div class="entry-meta d-none">
-					<?php
+    <div class="entry-meta d-none">
+      <?php
 						// cyberize_posted_on();
 						cyberize_posted_by();
 						cyberize_posted_on();
 						cyberize_post_commetnts_count();
 					?>
-				</div><!-- .entry-meta -->
+    </div><!-- .entry-meta -->
 
-				<div class="pr-3">
-					<?php
+    <div class="pr-3">
+      <?php
 					// <!-- CONTENT -->
 						the_excerpt();
 					?>
-				</div>
+    </div>
 
-				<hr>
+    <hr>
 
 
 
-			<?php else : ?>
+    <?php else : ?>
 
-				<?php
+    <?php
 				if ( is_singular() ) :
 					the_title( '<h1 class="entry-title">', '</h1>' );
 				else :
@@ -63,21 +63,21 @@
 				endif;
 
 				?>
-				<div class="entry-meta">
-					<?php
+    <div class="entry-meta">
+      <?php
 						cyberize_posted_by();
 					?>
-				</div><!-- .entry-meta -->
+    </div><!-- .entry-meta -->
 
-				<div class="pr-3 pt-3 pb-3">
-					<?php
+    <div class="pr-3 pt-3 pb-3">
+      <?php
 					// <!-- CONTENT -->
 						the_excerpt();
 					?>
-				</div>
+    </div>
 
-			<?php endif; ?>
+    <?php endif; ?>
 
-		</div><!-- .entry-content -->
+  </div><!-- .entry-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->
