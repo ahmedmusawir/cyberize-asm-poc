@@ -7,50 +7,50 @@
 ?>
 
 <style type="text/css">
-	#general-blog-page-header {
-		width: 100vw;
-		height: 320px;
-		background-color: rgba(189, 198, 18, .55);
-		background-image: url('<?php echo get_field('blog_page_header_image', 'option')['url'] ?>');
-		background-size: cover;
-		background-position: top center;
-		padding: 13rem 15px 0px;
-		margin-bottom: 60px;
-	}
+#general-blog-page-header {
+  width: 100vw;
+  height: 320px;
+  background-color: rgba(189, 198, 18, .55);
+  background-image: url('<?php echo get_field('blog_page_header_image', 'option')['url'] ?>');
+  background-size: cover;
+  background-position: top center;
+  padding: 13rem 15px 0px;
+  margin-bottom: 60px;
+}
 </style>
 
 <section class="archive-index-lovehealth">
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main">
 
-			<!-- Page Header with image -->
-			<section id="general-blog-page-header">
-				<div class="container-fluid">
-					<h1><?php the_field('blog_index_title', 'option') ?></h1>
-				</div>
-			</section>
+      <!-- Page Header with image -->
+      <section id="general-blog-page-header">
+        <div class="container-fluid">
+          <h1><?php the_field('blog_index_title', 'option') ?></h1>
+        </div>
+      </section>
 
-			<section class="container">
+      <section class="container">
 
-				<div class="row">
+        <div class="row">
 
 
-					<div class="col-sm-12 col-md-12 col-lg-9">
+          <div class="col-sm-12 col-md-12 col-lg-9">
 
-						<?php
+            <?php
 						if ( have_posts() ) : ?>
 
-							<header class="page-header">
-									<?php
+            <header class="page-header">
+              <?php
 										the_archive_title( '<h4 class="archive-type">', '</h4>' );
 										//the_archive_description( '<div class="archive-description">', '</div>' );
 									?>
-								<!-- <div class="long-underline"></div>	 -->
+              <!-- <div class="long-underline"></div>	 -->
 
-							</header><!-- .page-header -->
+            </header><!-- .page-header -->
 
-							<?php
+            <?php
 							/* Start the Loop */
 							while ( have_posts() ) : the_post();
 
@@ -71,19 +71,19 @@
 
 						endif; ?>
 
-					</div>
-					<div class="col-sm-12 col-md-12 col-lg-3">
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-3">
 
-						<?php get_sidebar(); ?>
+            <?php get_sidebar(); ?>
 
-					</div>
+          </div>
 
-				</div> <!-- End Row -->
+        </div> <!-- End Row -->
 
-			</section> <!-- End Container -->
+      </section> <!-- End Container -->
 
-		</main>
+    </main>
 
-	</div> <!-- end primary -->
+  </div> <!-- end primary -->
 
 </section>

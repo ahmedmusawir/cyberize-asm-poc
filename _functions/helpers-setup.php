@@ -68,10 +68,10 @@ function admin_style() {
 add_action('admin_enqueue_scripts', 'admin_style');
 
 // LIMIT THE EXCERPT LENGTH
-// function custom_excerpt_length( $length ) {
-//   return 50;
-// }
-// add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+function custom_excerpt_length( $length ) {
+  return 25;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
 /**

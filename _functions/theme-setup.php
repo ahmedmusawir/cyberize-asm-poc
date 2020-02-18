@@ -56,6 +56,11 @@ if ( ! function_exists( 'cyberize_setup' ) ) :
 			'portfolio' => esc_html__( 'Portfolio', 'cyberize' ),
 		) );
 
+		// Post Category Menu
+		register_nav_menus( array(
+			'post-cat' => esc_html__( 'Post Category', 'cyberize' ),
+		) );
+
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.

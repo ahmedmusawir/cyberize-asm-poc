@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * MODULE: Blog Index ASM
+ * MODULE: Archive Index lovehealth
  *
  */
 ?>
@@ -35,40 +35,46 @@
 
           <div class="col-sm-12 col-md-12 col-lg-9">
 
-            <div class="blog-index-header py-3">
-              <h2 class="header-title">All Article and Videos</h2>
-              <h5 class="header-title">Browse on dozens of articles and find the right one for you</h5>
-            </div>
+            <header class="blog-index-header py-3">
+              <?php
+										the_archive_title( '<h2 class="archive-type">', '</h2>' );
+										//the_archive_description( '<div class="archive-description">', '</div>' );
+									?>
+              <!-- <div class="long-underline"></div>	 -->
+
+            </header><!-- .page-header -->
 
             <article class="post-item-container">
 
-              <?php	if ( have_posts() ) :	?>
+              <?php	if ( have_posts() ) : ?>
 
               <div class="masonry">
+
                 <?php
-									/* Start the Loop */
-									while ( have_posts() ) : the_post();
+							/* Start the Loop */
+							while ( have_posts() ) : the_post();
 
-										/*
-										 * Include the Post-Format-specific template for the content.
-										 * If you want to override this in a child theme, then include a file
-										 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-										 */
-										get_template_part( 'template-parts/content', 'post-item-asm' );
+								/*
+								 * Include the Post-Format-specific template for the content.
+								 * If you want to override this in a child theme, then include a file
+								 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+								 */
+								get_template_part( 'template-parts/content', 'post-item-asm' );
 
-									endwhile;
+							endwhile;
 
-									?>
-              </div>
+              ?>
+              </div> <!-- END masonry -->
+
               <div class="post-nav-holder col-12"><?php the_posts_navigation(); ?></div>
               <?php
 
-								else :
+						else :
 
-									get_template_part( 'template-parts/content', 'none' );
+							get_template_part( 'template-parts/content', 'none' );
 
-								endif;
-							?>
+            endif; 
+          ?>
 
             </article>
 
@@ -80,14 +86,12 @@
 
           </div> <!-- 3 COLS END -->
 
-        </div> <!-- ROW END -->
+        </div> <!-- End Row -->
 
+      </section> <!-- End Container -->
 
+    </main>
 
-      </section>
-
-    </main><!-- #main -->
-  </div><!-- #primary -->
-
+  </div> <!-- end primary -->
 
 </section>

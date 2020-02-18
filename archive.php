@@ -12,8 +12,7 @@ get_header(); ?>
 
 <section id="BLOCK1">
 
-	<?php get_template_part( '_cyberize-modules/archive-members-index-lovehealth' ); ?>
-	<?php //get_template_part( '_cyberize-modules/archive-index-freeman' ); ?>
+  <?php get_template_part( '_cyberize-modules/archive-index-asm-sidebar' ); ?>
 
 </section>
 

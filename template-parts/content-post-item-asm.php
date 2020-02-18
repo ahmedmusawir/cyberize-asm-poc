@@ -14,15 +14,17 @@
 
     <?php if (has_post_thumbnail()) : ?>
 
+    <div class="FL-post-item-footer">
+      <?php cyberize_entry_footer(); ?>
+    </div>
+
     <figure class="featured-image-box">
       <a href="<?php the_permalink(); ?>">
         <?php the_post_thumbnail( 'full' ); ?>
       </a>
     </figure>
 
-    <div class="FL-post-item-footer d-none">
-      <?php cyberize_entry_footer(); ?>
-    </div>
+
 
     <?php
 				if ( is_singular() ) :
@@ -33,27 +35,27 @@
 
 				?>
 
-    <div class="entry-meta d-none">
+    <div class="entry-meta">
       <?php
-						// cyberize_posted_on();
-						cyberize_posted_by();
-						cyberize_posted_on();
-						cyberize_post_commetnts_count();
-					?>
+        cyberize_posted_by();
+        cyberize_posted_on();
+			?>
     </div><!-- .entry-meta -->
 
     <div class="pr-3">
       <?php
-					// <!-- CONTENT -->
-						the_excerpt();
-					?>
+        // <!-- CONTENT -->
+          the_excerpt();
+        ?>
     </div>
 
     <hr>
 
-
-
     <?php else : ?>
+
+    <div class="FL-post-item-footer">
+      <?php cyberize_entry_footer(); ?>
+    </div>
 
     <?php
 				if ( is_singular() ) :
@@ -65,15 +67,16 @@
 				?>
     <div class="entry-meta">
       <?php
-						cyberize_posted_by();
-					?>
+        cyberize_posted_by();
+        cyberize_posted_on();
+      ?>
     </div><!-- .entry-meta -->
 
     <div class="pr-3 pt-3 pb-3">
       <?php
-					// <!-- CONTENT -->
-						the_excerpt();
-					?>
+      // <!-- CONTENT -->
+        the_excerpt();
+      ?>
     </div>
 
     <?php endif; ?>
