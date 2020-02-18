@@ -15,20 +15,9 @@ get_header(); ?>
 
 <section id="BLOCK1">
 
-	<?php get_template_part( '_cyberize-modules/blog-index-lovehealth' ); ?>
+  <?php get_template_part( '_cyberize-modules/blog-index-asm-sidebar' ); ?>
 
 </section>
-
-<!-- FOOTER CTA SECTION -->
-<section id="footer-garage-cta" class="d-none">
-	<div class="container">
-		<h5 class="text-content mx-auto text-center">
-			<?php the_field('cta_for_blog_index_and_gallery', 'option') ?>
-		</h5>
-	</div>
-</section>
-<!-- FOOTER CTA SECTION ENDS-->
-
 
 <?php
 get_footer();

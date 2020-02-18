@@ -1,19 +1,19 @@
 /*=============================
 =            GLOBALS            =
 =============================*/
-@import "wp_default";
-@import "global";
-@import "custom";
-@import "contents/sidebar/sidebar-global";
-@import "footers/footer-general";
+@import 'wp_default';
+@import 'global';
+@import 'custom';
+@import 'contents/sidebar/sidebar-global';
+@import 'footers/footer-general';
 
 /*=======================================
 =    HEADER & FOOTER & SIDEBAR            =
 =======================================*/
 
-@import "headers/header-general";
-@import "footers/footer-lovehealth";
-@import "footers/footer-general";
+@import 'headers/header-general';
+@import 'footers/footer-lovehealth';
+@import 'footers/footer-general';
 // @import "contents/sidebar/sidebar-global";
 
 /*=====  End of HEADER & FOOTER  ======*/
@@ -22,8 +22,8 @@
 =    404 & THANKYOU PAGES            =
 =======================================*/
 
-@import "contents/404-page/404-lovehealth";
-@import "contents/thank-you-page/thank-you-lovehealth";
+@import 'contents/404-page/404-lovehealth';
+@import 'contents/thank-you-page/thank-you-lovehealth';
 
 /*=====  End of HEADER & FOOTER  ======*/
 
@@ -31,7 +31,7 @@
 =            PAGE GENERAL            =
 ========================================*/
 
-@import "contents/page/page-lovehealth";
+@import 'contents/page/page-lovehealth';
 
 /*=====  End of PAGE GENERAL  ======*/
 
@@ -39,7 +39,7 @@
 =            BLOG INDEX PAGE            =
 =======================================*/
 
-@import "contents/blog-index-page/blog-index-lovehealth";
+@import 'contents/blog-index-page/blog-index-asm';
 
 /*=====  End of BLOG INDEX PAGE  ======*/
 
@@ -47,7 +47,7 @@
 =            SINGLE BLOG POST            =
 ========================================*/
 
-@import "contents/single-post/post-lovehealth";
+@import 'contents/single-post/post-lovehealth';
 
 /*=====  End of SINGLE BLOG POST  ======*/
 
@@ -55,7 +55,7 @@
 =            COMMENTS			          =
 ========================================*/
 
-@import "contents/comments/comments-lovehealth";
+@import 'contents/comments/comments-lovehealth';
 
 /*=====  End of SINGLE BLOG POST  ======*/
 
@@ -63,7 +63,7 @@
 =            SEARCH INDEX PAGE            =
 =========================================*/
 
-@import "contents/search-index-page/search-index-lovehealth";
+@import 'contents/search-index-page/search-index-lovehealth';
 
 /*=====  End of SEARCH INDEX PAGE  ======*/
 
@@ -71,7 +71,7 @@
 =            ARCHIVE INDEX PAGE            =
 ==========================================*/
 
-@import "contents/archive-index-page/archive-index-lovehealth";
+@import 'contents/archive-index-page/archive-index-lovehealth';
 
 /*=====  End of ARCHIVE INDEX PAGE  ======*/
 
@@ -79,7 +79,7 @@
 =            SIDEBAR STYLES 	            =
 ==========================================*/
 
-@import "contents/sidebar/sidebar-lovehealth";
+@import 'contents/sidebar/sidebar-lovehealth';
 
 /*=====  End of SIDEBAR PAGE  ======*/
 
@@ -87,7 +87,7 @@
 =            WIDGETS STYLES 	            =
 ==========================================*/
 
-@import "contents/widgets/widget-lovehealth";
+@import 'contents/widgets/widget-lovehealth';
 
 /*=====  End of WIDGETS PAGE  ======*/
 
@@ -95,7 +95,7 @@
 =            PROJECT GLOBALS  	            =
 ==========================================*/
 
-@import "project_globals/lovehealth-globals";
+@import 'project_globals/lovehealth-globals';
 
 /*=====  End of PROJECT GLOBALS ======*/
 
@@ -103,7 +103,7 @@
 =            PORTFOLIO INDEX PAGE            =
 =======================================*/
 
-@import "contents/portfolio/lovehealth-portfolio";
+@import 'contents/portfolio/lovehealth-portfolio';
 
 /*=====  End of PORTFOLIO INDEX PAGE  ======*/
 
@@ -111,7 +111,7 @@
 =            THRIVE PAGES 	            =
 ==========================================*/
 
-@import "thrive-pages/lovehealth-thrive";
+@import 'thrive-pages/lovehealth-thrive';
 
 /*=====  End of THRIVE PAGES  ======*/
 
@@ -119,7 +119,7 @@
 =            THRIVE LANDING PAGES 	            =
 ==========================================*/
 
-@import "thrive-landing-pages/global-landing";
+@import 'thrive-landing-pages/global-landing';
 
 /*=====  End of THRIVE LANDING PAGES  ======*/
 
@@ -127,7 +127,7 @@
 =            WOOCOMMERCE STYLES            =
 =======================================*/
 
-@import "woocom/woocom-global";
+@import 'woocom/woocom-global';
 // @import "woocom/woocom-livewell";
 
 /*=====  End of WOOCOMMERCE STYLES  ======*/
@@ -136,6 +136,6 @@
 =            BUDDYPRESS STYLES            =
 =======================================*/
 
-@import "buddypress/bp-global";
+@import 'buddypress/bp-global';
 
 /*=====  End of BUDDYPRESS STYLES  ======*/
