@@ -11,7 +11,7 @@ get_header(); ?>
 
 <section id="BLOCK1">
 
-	<?php get_template_part( '_cyberize-modules/search-index-freeman' ); ?>
+  <?php get_template_part( '_cyberize-modules/search-index-asm-sidebar' ); ?>
 
 </section>
 

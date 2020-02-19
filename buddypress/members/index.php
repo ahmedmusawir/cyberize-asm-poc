@@ -9,7 +9,6 @@
 <section id="athlete-index">
 
   <div class="screen-content">
-
     <div class="search-menu-container">
       <article class="">
         <?php bp_get_template_part( 'common/search-and-filters-bar' ); ?>

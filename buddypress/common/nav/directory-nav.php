@@ -8,11 +8,11 @@
 ?>
 <!-- <style>
 .bp-nav {
-	border: 4px dotted red;
+  border: 4px dotted red;
 }
 </style>
 <div class="bp-nav">
-<h4><strong>directory-nav.php under common/nav folder</strong></h4> -->
+  <h4><strong>directory-nav.php under common/nav folder</strong></h4> -->
 
 <nav class="<?php bp_nouveau_directory_type_navs_class(); ?>" role="navigation"
   aria-label="<?php esc_attr_e( 'Directory menu', 'buddypress' ); ?>">
