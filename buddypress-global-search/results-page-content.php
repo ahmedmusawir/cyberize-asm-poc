@@ -16,8 +16,32 @@
         <?php buddyboss_global_search_filters();?>
       </ul>
     </div>
-    <div class="search_results">
-      <?php buddyboss_global_search_results();?>
-    </div>
+
+    <!-- MOOSE STUFF -->
+    <section id="athlete-index-container" class="container-fluid">
+
+      <div class="row">
+
+        <div class="col-md-9">
+
+
+          <div class="search_results">
+            <?php buddyboss_global_search_results();?>
+          </div>
+
+        </div>
+        <div class="col-md-3">
+
+          <img class="img-fluid" src="/wp-content/uploads/2020/01/profile-sidebar.png" alt="">
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- MOOSE STUFF -->
+
   </div>
+
 </div><!-- .bboss_search_page -->

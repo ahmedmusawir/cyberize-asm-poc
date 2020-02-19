@@ -1,3 +1,13 @@
+/**
+ * ITEM INDEX
+ * 1. ATHLETE SINGLE PROFILE
+ * 2. ATHLETE INDEX
+ * 3. BP GLOBAL SEARCH INDEX
+ */
+
+/**
+ * GENERAL
+ */
 .container-fluid {
   padding: 0 !important;
 }
@@ -7,7 +17,7 @@ body.buddypress {
   }
 }
 /**
- * ATHLETE SINGLE PROFILE
+ * 1. ATHLETE SINGLE PROFILE
  */
 
 #buddypress {
@@ -255,7 +265,7 @@ body.buddypress {
 }
 
 /**
- * ATHLETE INDEX
+ * 2. ATHLETE INDEX
  */
 #athlete-index {
   // border: 4px dotted pink;
@@ -338,6 +348,25 @@ body.buddypress {
               color: lighten($color: $cg-primary, $amount: 20%);
             }
           }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * 3. BP GLOBAL SEARCH INDEX
+ */
+#buddypress {
+  .search_results {
+    #members-stream {
+      .item-entry {
+        .item-avatar {
+          border: 4px dotted hotpink;
+          // width: 100%;
+        }
+        .item {
+          border: 4px dotted red;
         }
       }
     }
