@@ -22,7 +22,7 @@ get_header(); ?>
   background-image: url('<?php the_field('general_page_header_image', 'option') ?>');
   background-size: cover;
   background-position: top center;
-  margin-top: 70px;
+  margin-top: 50px;
 }
 </style>
 
@@ -37,7 +37,7 @@ $coach_name = bp_core_get_user_displayname( bp_loggedin_user_id() );
 </section>
 
 
-<div id="page-ias" class="content-area container-fluid">
+<div id="page-asm" class="content-area container-fluid">
   <div class="row">
     <main id="main" class="site-main col-sm-12 col-md-12 col-lg-12 col-xl-12">
       <?php
