@@ -1,5 +1,3 @@
-<H1><code>/buddypress-global-search/loop/post.php</code></H1>
-
 <li class="bboss_search_item bboss_search_item_post">
   <h3 class="entry-title">
     <a href="<?php the_permalink(); ?>"

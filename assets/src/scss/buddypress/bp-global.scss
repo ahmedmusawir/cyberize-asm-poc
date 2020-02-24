@@ -368,14 +368,28 @@ body.buddypress {
       z-index: 100;
 
       .bboss_search_filters_wrapper {
+        // border: 3px dotted yellow;
         .search_filters {
           margin-top: 1.5rem;
           margin-left: 1rem;
         }
+
+        ul {
+          li {
+            a {
+              color: lighten($color: $cg-primary, $amount: 30%);
+            }
+          }
+
+          li.active {
+            a {
+              background: lighten($color: #e6e6e6, $amount: 0%);
+            }
+          }
+        }
       }
 
       .bboss_search_form_wrapper {
-        // border: 3px dotted yellow;
         // width: 500px;
         .search-form {
           margin-top: -1.5rem;
@@ -399,6 +413,9 @@ body.buddypress {
     margin-top: -2.5rem;
   }
 
+  /**
+   * Global Search Member
+   */
   .search_results {
     #members-stream {
       .item-entry-asm {
@@ -441,6 +458,40 @@ body.buddypress {
               }
             }
           }
+        }
+      }
+    }
+  }
+
+  /**
+   * Global Search Posts
+   */
+  .bboss_search_item.bboss_search_item_post {
+    // border: 1rem dotted red;
+    box-shadow: 2px 2px 6px #e7e7e7;
+    margin-left: 2rem;
+    margin-right: 1rem;
+
+    .entry-title {
+      padding: 0 2rem;
+
+      a {
+        color: $cg-primary;
+
+        &:hover {
+          color: lighten($color: $cg-primary, $amount: 10%);
+        }
+      }
+    }
+
+    .entry-content {
+      padding: 0 2rem;
+
+      a.moretag {
+        color: lighten($color: $cg-primary, $amount: 20%);
+
+        &:hover {
+          color: lighten($color: $cg-primary, $amount: 30%);
         }
       }
     }

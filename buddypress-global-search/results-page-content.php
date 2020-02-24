@@ -36,7 +36,8 @@
       </div>
       <div class="col-md-3">
 
-        <img class="img-fluid" src="/wp-content/uploads/2020/01/profile-sidebar.png" alt="">
+        <!-- <img class="img-fluid" src="/wp-content/uploads/2020/01/profile-sidebar.png" alt=""> -->
+        <?php get_sidebar(); ?>
 
       </div>
 
